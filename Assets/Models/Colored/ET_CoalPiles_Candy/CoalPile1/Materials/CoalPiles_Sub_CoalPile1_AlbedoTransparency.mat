@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Hammer_lambert2_AlbedoTransparency
+  m_Name: CoalPiles_Sub_CoalPile1_AlbedoTransparency
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -26,7 +26,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: 58356194f0da3364896fce21e50c579b, type: 3}
+        m_Texture: {fileID: 2800000, guid: 71a0635cc14469142bf2efaf3505d801, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
@@ -46,15 +46,15 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: d50159fc7c1346f4c820e927294c5143, type: 3}
+        m_Texture: {fileID: 2800000, guid: 51a3bde37ef3bde44858fcc21e8f84ba, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
-        m_Texture: {fileID: 2800000, guid: 16d3a565a510bee4cadf4b05e78c71ad, type: 3}
+        m_Texture: {fileID: 2800000, guid: 20c69365d03cb584ab6859598256c945, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
-        m_Texture: {fileID: 2800000, guid: cff6b90c51354054bbf2293efced87d6, type: 3}
+        m_Texture: {fileID: 2800000, guid: 8039491a26c6bb64f99261e2fc568ae4, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ParallaxMap:

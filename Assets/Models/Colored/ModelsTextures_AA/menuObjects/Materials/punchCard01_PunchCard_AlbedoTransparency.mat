@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Hammer_lambert2_AlbedoTransparency
+  m_Name: punchCard01_PunchCard_AlbedoTransparency
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -26,7 +26,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: 58356194f0da3364896fce21e50c579b, type: 3}
+        m_Texture: {fileID: 2800000, guid: b4447c64d01e696449b9582c0d96325e, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
@@ -46,15 +46,15 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: d50159fc7c1346f4c820e927294c5143, type: 3}
+        m_Texture: {fileID: 2800000, guid: 931bb6fc635251a4baf05c576f00c738, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
-        m_Texture: {fileID: 2800000, guid: 16d3a565a510bee4cadf4b05e78c71ad, type: 3}
+        m_Texture: {fileID: 2800000, guid: 0c651047e6c5180439c510b9de0e3c14, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
-        m_Texture: {fileID: 2800000, guid: cff6b90c51354054bbf2293efced87d6, type: 3}
+        m_Texture: {fileID: 2800000, guid: 6e0fa4e765b68884bb4d4fa457ec2c10, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ParallaxMap:
