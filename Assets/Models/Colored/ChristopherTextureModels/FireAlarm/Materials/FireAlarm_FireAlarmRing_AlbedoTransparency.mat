@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: FireAlarm_BiggerBox_AlbedoTransparency
+  m_Name: FireAlarm_FireAlarmRing_AlbedoTransparency
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -26,7 +26,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: 708e801236d90cf47b34fb87f540cc96, type: 3}
+        m_Texture: {fileID: 2800000, guid: 7954d2da8316e9242aed7b63b1d4aa6e, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
@@ -46,15 +46,15 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 2279de592dc4f1a4c8a45c3a8f6915d8, type: 3}
+        m_Texture: {fileID: 2800000, guid: 79fc7226183a73543a9dbcdc29c2e361, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
-        m_Texture: {fileID: 2800000, guid: 0d5aa42dff2109747bf3f58a7888621a, type: 3}
+        m_Texture: {fileID: 2800000, guid: 6c05189865b61434c949dcf2ecce02cc, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
-        m_Texture: {fileID: 2800000, guid: 2b1ea480993be4642bdc8ec7a7f1bfd9, type: 3}
+        m_Texture: {fileID: 2800000, guid: 09cb04f2d7061dc409404a1f93b84177, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ParallaxMap:
