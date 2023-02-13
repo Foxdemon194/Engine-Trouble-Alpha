@@ -1,0 +1,5 @@
+Curved pipes causing errors with rigidbody, cannot remove because grabbable script depends on it, curved pipes do not need to be grabbable
+
+Not gonna step on toes, just a heads up
+
+-Pedro Terra Programming team
