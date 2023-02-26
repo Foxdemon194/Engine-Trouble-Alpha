@@ -179,6 +179,7 @@ GameObject:
   - component: {fileID: 7113608879058173221}
   - component: {fileID: 8921918607523368331}
   - component: {fileID: 1609603494411727309}
+  - component: {fileID: 8206457978912777602}
   m_Layer: 0
   m_Name: Handle
   m_TagString: Untagged
@@ -382,6 +383,20 @@ MonoBehaviour:
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
+--- !u!64 &8206457978912777602
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3143826774720829639}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -6659003102834268097, guid: 7cdb17b9b02925344a53f35677d56d81, type: 3}
 --- !u!1 &6431422881145309894
 GameObject:
   m_ObjectHideFlags: 0
