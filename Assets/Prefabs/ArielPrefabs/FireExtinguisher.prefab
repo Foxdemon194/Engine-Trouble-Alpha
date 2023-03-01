@@ -13947,7 +13947,7 @@ Transform:
   - {fileID: 6565532736031129025}
   - {fileID: 6671606369625806585}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 180.426, z: 0}
 --- !u!65 &6671606370453710820
 BoxCollider:
@@ -13971,10 +13971,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 6671606370453710817}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70e6f6d3b1cd25c4abb4d805f80518eb, type: 3}
+  m_Script: {fileID: 11500000, guid: 6709ddff7b31c3d419b78b82f415e677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gadge: {fileID: 6565532736031129025}
+  sound: {fileID: 6671606370453710828}
+  Water: {fileID: 2883870292947408319}
+  WaterHitbox: {fileID: 6671606370644307252}
+  waterParticles: {fileID: 6056273389171962442}
+  Fuel:
+  - {fileID: 6671606369054730033}
+  - {fileID: 6671606368912752493}
+  - {fileID: 6671606369224696151}
+  - {fileID: 6671606368613780173}
+  - {fileID: 6671606370124960264}
+  - {fileID: 6671606370159100214}
+  - {fileID: 6671606369353967039}
+  - {fileID: 6671606369261474327}
+  - {fileID: 6671606369010646778}
+  extinguisherFuel: 10
 --- !u!54 &6671606370453710818
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -14546,6 +14560,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1996171366719909293, guid: 9708dbf7d2326844cb773e9caafefe01, type: 3}
   m_PrefabInstance: {fileID: 1595341573729167515}
   m_PrefabAsset: {fileID: 0}
+--- !u!198 &6056273389171962442 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 4769310056237030097, guid: 9708dbf7d2326844cb773e9caafefe01, type: 3}
+  m_PrefabInstance: {fileID: 1595341573729167515}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6671606369945779657
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14657,6 +14676,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 9708dbf7d2326844cb773e9caafefe01, type: 3}
+--- !u!1 &2883870292947408319 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8400302258917959798, guid: 9708dbf7d2326844cb773e9caafefe01, type: 3}
+  m_PrefabInstance: {fileID: 6671606369945779657}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5126677394110582884 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1996171366719909293, guid: 9708dbf7d2326844cb773e9caafefe01, type: 3}
