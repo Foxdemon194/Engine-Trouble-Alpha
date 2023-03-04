@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2642144314446915036}
   - component: {fileID: 238197136875704598}
   - component: {fileID: 8768450180064960395}
+  - component: {fileID: 375330005331654322}
   m_Layer: 0
   m_Name: Fuse Box
   m_TagString: Untagged
@@ -32,7 +33,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &2642144314446915036
 MeshFilter:
@@ -97,3 +98,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.0567639, y: 1.4571105, z: 0.26887724}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &375330005331654322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1751552227527520451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d42dab5e06bd38409acb9aa5b70bc26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  redlights: []
+  lights: []
+  lowIntensity: 0.2
+  normalIntensity: 0.6
+  timeBreak: 
+  fuses: []
+  fusesColliders: []

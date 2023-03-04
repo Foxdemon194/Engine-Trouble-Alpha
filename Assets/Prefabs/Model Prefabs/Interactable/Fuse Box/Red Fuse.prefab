@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1523080958827481074}
   - component: {fileID: 1377626427138150258}
   - component: {fileID: 7032898301243006342}
+  - component: {fileID: 3733922755892671723}
   m_Layer: 0
   m_Name: Red Fuse
   m_TagString: Untagged
@@ -231,3 +232,15 @@ MonoBehaviour:
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
+--- !u!114 &3733922755892671723
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7009475889046566710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b0c5f53e03293b45ba0aea34c9fd041, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

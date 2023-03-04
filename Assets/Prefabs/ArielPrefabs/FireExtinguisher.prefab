@@ -243,7 +243,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: ba0c4853a3db055468fad57b75be4b36, type: 2}
+  - {fileID: 2100000, guid: 1309d7d196276134c9da0feda0055dd5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2069,7 +2069,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 1454
+  m_VersionIndex: 1460
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -5787,7 +5787,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 2119
+  m_VersionIndex: 2125
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -13562,7 +13562,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 3700
+  m_VersionIndex: 3706
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -13919,12 +13919,12 @@ GameObject:
   m_Component:
   - component: {fileID: 6671606370453710816}
   - component: {fileID: 6671606370453710820}
-  - component: {fileID: 6671606370453710821}
   - component: {fileID: 6671606370453710818}
   - component: {fileID: 6671606370453710819}
   - component: {fileID: 6671606370453710830}
   - component: {fileID: 6671606370453710828}
   - component: {fileID: 6671606370453710829}
+  - component: {fileID: 506626272}
   m_Layer: 6
   m_Name: FireExtinguisher
   m_TagString: Metal
@@ -13939,9 +13939,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6671606370453710817}
-  m_LocalRotation: {x: -0, y: 0.99999315, z: -0, w: -0.003719428}
+  m_LocalRotation: {x: 0, y: 0.9999931, z: -0, w: -0.0037173482}
   m_LocalPosition: {x: -4.0169315, y: 0.60199976, z: -0.2238617}
-  m_LocalScale: {x: 0.38832006, y: 0.42351222, z: 0.35742307}
+  m_LocalScale: {x: 0.38832012, y: 0.42351222, z: 0.3574231}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6565532736031129025}
@@ -13962,33 +13962,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.11968535, y: 0.33966768, z: 0.34663582}
   m_Center: {x: 0.055810247, y: -0.061005127, z: -0.102478676}
---- !u!114 &6671606370453710821
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6671606370453710817}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6709ddff7b31c3d419b78b82f415e677, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sound: {fileID: 6671606370453710828}
-  Water: {fileID: 2883870292947408319}
-  WaterHitbox: {fileID: 6671606370644307252}
-  waterParticles: {fileID: 6056273389171962442}
-  Fuel:
-  - {fileID: 6671606369054730033}
-  - {fileID: 6671606368912752493}
-  - {fileID: 6671606369224696151}
-  - {fileID: 6671606368613780173}
-  - {fileID: 6671606370124960264}
-  - {fileID: 6671606370159100214}
-  - {fileID: 6671606369353967039}
-  - {fileID: 6671606369261474327}
-  - {fileID: 6671606369010646778}
-  extinguisherFuel: 10
 --- !u!54 &6671606370453710818
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -14051,7 +14024,7 @@ MonoBehaviour:
   m_SelectExited:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6671606370453710821}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Pickup, Assembly-CSharp
         m_MethodName: StopWater
         m_Mode: 1
@@ -14066,7 +14039,7 @@ MonoBehaviour:
   m_Activated:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6671606370453710821}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Pickup, Assembly-CSharp
         m_MethodName: ShootWater
         m_Mode: 1
@@ -14081,7 +14054,7 @@ MonoBehaviour:
   m_Deactivated:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6671606370453710821}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Pickup, Assembly-CSharp
         m_MethodName: StopWater
         m_Mode: 1
@@ -14366,6 +14339,33 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &506626272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6671606370453710817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 318717f18d9bbb04882d8bdb3046e19d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sound: {fileID: 6671606370453710828}
+  Water: {fileID: 2883870292947408319}
+  WaterHitbox: {fileID: 6671606370644307252}
+  waterParticles: {fileID: 6056273389171962442}
+  Fuel:
+  - {fileID: 6671606369054730033}
+  - {fileID: 6671606368912752493}
+  - {fileID: 6671606369224696151}
+  - {fileID: 6671606368613780173}
+  - {fileID: 6671606370124960264}
+  - {fileID: 6671606370159100214}
+  - {fileID: 6671606369353967039}
+  - {fileID: 6671606369261474327}
+  - {fileID: 6671606369010646778}
+  extinguisherFuel: 10
 --- !u!1 &6671606370644307252
 GameObject:
   m_ObjectHideFlags: 0
