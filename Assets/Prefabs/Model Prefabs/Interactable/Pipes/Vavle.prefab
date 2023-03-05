@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5267602758621616764}
   - component: {fileID: 7921830273128253473}
   - component: {fileID: 8356906101957416043}
+  - component: {fileID: 8540572242987200000}
   m_Layer: 0
   m_Name: Vavle
   m_TagString: Untagged
@@ -231,3 +232,26 @@ MonoBehaviour:
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
+--- !u!114 &8540572242987200000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1788123671041922612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88bcf6573431d8c4c88c09146a3e5bcd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sound: {fileID: 0}
+  minValue: 0
+  maxvalue: 0
+  depletionSpeed: 0.02
+  pressure: {fileID: 0}
+  speed: 1
+  activateRust: 0
+  timetoStop: 0
+  setTimeToStopHigh: 0
+  setTimeToStopLow: 0
+  rust: {fileID: 0}

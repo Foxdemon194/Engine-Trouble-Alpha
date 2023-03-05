@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 3984074777400477800}
   - component: {fileID: 6916774291075507288}
   - component: {fileID: 8624499964962898607}
+  - component: {fileID: 1317962505436511606}
   m_Layer: 0
   m_Name: CoalPile_5
   m_TagString: CoalPile
@@ -143,6 +144,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff10ac0e54de44342b282a79d2111336, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sound: {fileID: 0}
+--- !u!114 &1317962505436511606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2476585040544641809}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0d47addaed3ea4429ae9b7a10e7abe6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextCoalPile: {fileID: 0}
 --- !u!1 &8940157525045461475
 GameObject:
   m_ObjectHideFlags: 0

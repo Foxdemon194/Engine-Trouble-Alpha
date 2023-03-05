@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 9107318792349517024}
   - component: {fileID: 573109161910017059}
   - component: {fileID: 6589794981270599249}
+  - component: {fileID: 4470672325897141399}
   m_Layer: 0
   m_Name: C. Barrel
   m_TagString: Untagged
@@ -183,6 +184,22 @@ MonoBehaviour:
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
+--- !u!114 &4470672325897141399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 796018117484265178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a2c1dffb7cb1c24fba478586c005842, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sound: {fileID: 0}
+  coalPile: {fileID: 8713188207684661076, guid: b3a9f844573347740b3092473388feae, type: 3}
+  handle1: {fileID: 3783425856394102939, guid: 9ffb3ada3788b5e47a93b072b3ff1cb9, type: 3}
+  handle2: {fileID: 6116181676904562387, guid: ab29951e9bda0b2449d082096f026151, type: 3}
 --- !u!1 &1377689341949194672
 GameObject:
   m_ObjectHideFlags: 0
