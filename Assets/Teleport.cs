@@ -5,10 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class Teleport : MonoBehaviour
 {
-    public void OnCollisionEnter(Collision collision)
+    void OnTriggerEnter(Collider collision)
     {
+        Debug.Log("AAAAAAA");
         if (collision.gameObject.tag == "Player")
+        {
+            Debug.Log("AAAAAAA");
             SceneManager.LoadScene("Level1");
+        }
+            
     }
 
 }
