@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Alejandro's script
 //Place this script where ever the coal is going to be shovelled in the engine. Needs to be a trigger collider
 
 public class Coal : MonoBehaviour
