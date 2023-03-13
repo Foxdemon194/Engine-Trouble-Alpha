@@ -8,6 +8,8 @@ public class LoadingScript : MonoBehaviour
     public GameObject canvas;
     public GameObject locomotionSystem;
 
+    public GameObject tutorialDialogue;
+
     private float time = 5;
 
     // Start is called before the first frame update
@@ -15,6 +17,7 @@ public class LoadingScript : MonoBehaviour
     {
         canvas.SetActive(true);
         locomotionSystem.SetActive(false);
+        tutorialDialogue.SetActive(false);
     }
 
     // Update is called once per frame
@@ -25,6 +28,7 @@ public class LoadingScript : MonoBehaviour
         {
             canvas.SetActive(false);
             locomotionSystem.SetActive(true);
+            tutorialDialogue.SetActive(true);
             Destroy(this.gameObject);
         }
     }
