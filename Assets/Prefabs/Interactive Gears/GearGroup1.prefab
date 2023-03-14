@@ -33,7 +33,7 @@ Transform:
   - {fileID: 7676435050319112589}
   - {fileID: 1491160259280672138}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &107800678378805732
 PrefabInstance:
@@ -195,6 +195,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7467378104913642509, guid: 097e43d2bc48d754fb3eed738f49309f, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 097e43d2bc48d754fb3eed738f49309f, type: 3}
@@ -298,34 +302,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0926627b88a1b1545b002c93bf76ad72, type: 3}
   m_PrefabInstance: {fileID: 6179432976548067679}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &6413310985627911182 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 0926627b88a1b1545b002c93bf76ad72, type: 3}
-  m_PrefabInstance: {fileID: 6179432976548067679}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &4210411632777597321
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6413310985627911182}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a412fcf7a3ef444183643e43762ab43, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sound: {fileID: 0}
-  breakSound: {fileID: 0}
-  progress: {fileID: 0}
-  broken: 0
-  brokenGear: {fileID: 0}
-  normalGear: {fileID: 0}
-  gears: []
-  setToFix: 0
-  timetoBreak: 0
-  setTimeToBreakHigh: 0
-  setTimeToBreakLow: 0
 --- !u!1001 &7855003963691470438
 PrefabInstance:
   m_ObjectHideFlags: 0
