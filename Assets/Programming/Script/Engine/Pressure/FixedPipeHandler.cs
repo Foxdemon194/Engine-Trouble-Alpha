@@ -24,6 +24,8 @@ public class FixedPipeHandler : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+       
+
         brokenPipeActive = false;    //Set to false becouse there is no pipe broken
         //normalPipeActive = true;     //Set to true becouse there is no pipe broken
         total = brokenPipe.Length;   //Initialize with the Length of the arrey
@@ -54,9 +56,11 @@ public class FixedPipeHandler : MonoBehaviour
     //On Collision Enter ...
     void OnCollisionEnter(Collision other)
     {
+        Debug.Log("Hii");
         //.. if brokenPipeActive bool varibale is fasle and the object on collision has the "ReplacePipe" tag
         if (brokenPipeActive == false && other.gameObject.tag == "ReplacePipe")
         {
+            Debug.Log("You suck");
             normalPipe[random].SetActive(true);                  //Set the correct normal pipe Game Object as true
             audio[random].SetActive(false);
             GetComponentInParent<Pressure>().brokenPipe = false; //Set the brokenPipe bool varibale in Pressure script in Parent as false
