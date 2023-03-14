@@ -819,7 +819,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 79970458300940262, guid: 544a389757797a04bb9f413e304a39cd, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.39370087
+      value: 1.5917503
       objectReference: {fileID: 0}
     - target: {fileID: 79970458300940262, guid: 544a389757797a04bb9f413e304a39cd, type: 3}
       propertyPath: m_LocalScale.y
@@ -831,15 +831,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 79970458300940262, guid: 544a389757797a04bb9f413e304a39cd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 30.04179
+      value: 30.042
       objectReference: {fileID: 0}
     - target: {fileID: 79970458300940262, guid: 544a389757797a04bb9f413e304a39cd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.193
+      value: -0.269
       objectReference: {fileID: 0}
     - target: {fileID: 79970458300940262, guid: 544a389757797a04bb9f413e304a39cd, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -17.04452
+      value: -17.045
       objectReference: {fileID: 0}
     - target: {fileID: 79970458300940262, guid: 544a389757797a04bb9f413e304a39cd, type: 3}
       propertyPath: m_LocalRotation.w
@@ -872,6 +872,10 @@ PrefabInstance:
     - target: {fileID: 745288674811127132, guid: 544a389757797a04bb9f413e304a39cd, type: 3}
       propertyPath: m_Name
       value: Small Pipe (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9210814617463647349, guid: 544a389757797a04bb9f413e304a39cd, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
