@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class FixedPipeHandler : MonoBehaviour
 {
-    public GameObject[] steamParticles;
+    //public GameObject[] steamParticles;
     public GameObject[] audio;
     public GameObject[] normalPipe;  //Reference arrey to the NormalPipes GameObjects
     public GameObject[] brokenPipe;  //Reference arrey to the BrokenPipes GameObjects
@@ -61,10 +61,10 @@ public class FixedPipeHandler : MonoBehaviour
             audio[random].SetActive(false);
             GetComponentInParent<Pressure>().brokenPipe = false; //Set the brokenPipe bool varibale in Pressure script in Parent as false
             Destroy(other.gameObject);                           //Destroy the GameObject that was on collision
-            foreach (GameObject obj in steamParticles)
+            /*foreach (GameObject obj in steamParticles)
             {
                 obj.SetActive(false);
-            }
+            }*/
             checkOnce = true;                         
         }
     }

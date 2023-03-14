@@ -10,7 +10,7 @@ public class SpawnPipe : MonoBehaviour
     void Update()
     {
         //Will spawn a pipe when it finds a broken pipe in the scene
-        if (GameObject.FindGameObjectWithTag("BrokenPipe"))
+        if (GameObject.FindGameObjectWithTag("BrokenPipe") && GameObject.FindGameObjectWithTag("ReplacePipe") == null)
         {
             Instantiate(prefab, this.transform.position, Quaternion.identity);
         }
