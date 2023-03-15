@@ -3,6 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Threading.Tasks;
 
+/// <summary>
+/// script written by Andres Lopez
+/// adjusted / implemented by Ralfo (Tony) Manzur
+/// </summary>
+
 public class BasicTutorialDialogue : MonoBehaviour
 {
     int interval = 0;
@@ -32,6 +37,8 @@ public class BasicTutorialDialogue : MonoBehaviour
     public AudioClip clip20;
     public AudioClip clip21;
     public AudioClip clip22;
+    public AudioClip status1;
+    public AudioClip status2;
 
     // Start is called before the first frame update
     void Start()
@@ -96,89 +103,101 @@ public class BasicTutorialDialogue : MonoBehaviour
         }
         if (dialogueNumber == 8)
         {
-            interval = 10;
+            interval = 11;
             playerAudioS.clip = clip8;
             playerAudioS.Play();
         }
         if (dialogueNumber == 9)
         {
+            interval = 15;
+            playerAudioS.clip = status1;
+            playerAudioS.Play();
+        }
+        if (dialogueNumber == 10)
+        {
+            interval = 11;
+            playerAudioS.clip = status2;
+            playerAudioS.Play();
+        }
+        if (dialogueNumber == 11)
+        {
             interval = 27;
             playerAudioS.clip = clip9;
             playerAudioS.Play();
         }
-        if (dialogueNumber == 10)
+        if (dialogueNumber == 12)
         {
             interval = 14;
             playerAudioS.clip = clip10;
             playerAudioS.Play();
         }
-        if (dialogueNumber == 11)
+        if (dialogueNumber == 13)
         {
             interval = 16;
             playerAudioS.clip = clip11;
             playerAudioS.Play();
         }
-        if (dialogueNumber == 12)
+        if (dialogueNumber == 14)
         {
             interval = 18;
             playerAudioS.clip = clip12;
             playerAudioS.Play();
         }
-        if (dialogueNumber == 13)
+        if (dialogueNumber == 15)
         {
-            interval = 14;
+            interval = 15;
             playerAudioS.clip = clip13;
             playerAudioS.Play();
         }
-        if (dialogueNumber == 14)
+        if (dialogueNumber == 16)
         {
             interval = 13;
             playerAudioS.clip = clip14;
             playerAudioS.Play();
         }
-        if (dialogueNumber == 15)
+        if (dialogueNumber == 17)
         {
             interval = 17;
             playerAudioS.clip = clip15;
             playerAudioS.Play();
         }
-        if (dialogueNumber == 16)
+        if (dialogueNumber == 18)
         {
-            interval = 15;
+            interval = 16;
             playerAudioS.clip = clip16;
             playerAudioS.Play();
         }
-        if (dialogueNumber == 17)
+        if (dialogueNumber == 19)
         {
             interval = 15;
             playerAudioS.clip = clip17;
             playerAudioS.Play();
         }
-        if (dialogueNumber == 18)
+        if (dialogueNumber == 20)
         {
             interval = 20;
             playerAudioS.clip = clip18;
             playerAudioS.Play();
         }
-        if (dialogueNumber == 19)
+        if (dialogueNumber == 21)
         {
             interval = 10;
             playerAudioS.clip = clip19;
             playerAudioS.Play();
         }
-        if (dialogueNumber == 20)
+        if (dialogueNumber == 22)
         {
             interval = 13;
             playerAudioS.clip = clip20;
             playerAudioS.Play();
         }
-        if (dialogueNumber == 21)
+        if (dialogueNumber == 23)
         {
             interval = 13;
             playerAudioS.clip = clip21;
             playerAudioS.Play();
         }
-        if (dialogueNumber == 22)
+        if (dialogueNumber == 24)
         {
             interval = 15;
             playerAudioS.clip = clip22;
