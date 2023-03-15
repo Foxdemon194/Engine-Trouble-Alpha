@@ -20,7 +20,8 @@ public class FixedPipeHandler : MonoBehaviour
     public bool checkOnce = true;
 
     public bool brokenStatus;        //Bool Variblae to know when a pipe is broken
-    public bool normalPype;
+
+    public bool normalPype;         //Bool for each pipe that chekcs if its fixed
     public bool normalPype2;
     public bool normalPype3;
     public bool normalPype4;
@@ -34,7 +35,7 @@ public class FixedPipeHandler : MonoBehaviour
    public void Start()
     {
 
-        normalPype = true;
+        normalPype = true;          //sets the pipes to true since they don't start broken
         normalPype2 = true;
         normalPype3 = true;
         normalPype4 = true;
@@ -66,32 +67,36 @@ public class FixedPipeHandler : MonoBehaviour
                 normalPipe[random].SetActive(false); //Set the correct normal pipe GameObject as false
                 //normalPipeActive = false;            //Set to false becouse there is a broken pipe
                 checkOnce = false;//Make sure it does the following code only once
+
+                //Specific pipes will break depending on what number random becomes
                if(random == 0)
                 {
-
+                    //first pipe breaks if its 0
                     normalPype = false;
 
                 }
                 if (random == 1)
                 {
-
+                    //second pipe breaks if its 1
                     normalPype2 = false;
 
                 }
                 if (random == 2)
                 {
-
+                    //third pipe breaks if its 2
                     normalPype3 = false;
 
                 }
                 if (random == 3)
                 {
-
+                    //fourth pipe breaks if its 3
                     normalPype4 = false;
 
                 }
             }
         }
+
+        //If the bool is false, then the pipe isn't active anymore and vice versa
         if (normalPype == false)
         {
 
@@ -104,6 +109,7 @@ public class FixedPipeHandler : MonoBehaviour
             pype.SetActive(true);
 
         }
+        //If the bool is false, then the pipe isn't active anymore and vice versa
         if (normalPype2 == false)
         {
 
@@ -116,6 +122,7 @@ public class FixedPipeHandler : MonoBehaviour
             pype2.SetActive(true);
 
         }
+        //If the bool is false, then the pipe isn't active anymore and vice versa
         if (normalPype3 == false)
         {
 
@@ -128,6 +135,7 @@ public class FixedPipeHandler : MonoBehaviour
             pype3.SetActive(true);
 
         }
+        //If the bool is false, then the pipe isn't active anymore and vice versa
         if (normalPype4 == false)
         {
 
@@ -145,36 +153,35 @@ public class FixedPipeHandler : MonoBehaviour
     //On Collision Enter ...
     public void OnCollisionEnter(Collision other)
     {
-        Debug.Log("Hii");
         //.. if brokenPipeActive bool varibale is fasle and the object on collision has the "ReplacePipe" tag
         if (brokenPipeActive == false && other.gameObject.tag == "ReplacePipe")
         {
-            Debug.Log("You suck");
             normalPipe[random].SetActive(true);                  //Set the correct normal pipe Game Object as true
             audio[random].SetActive(false);
             GetComponentInParent<Pressure>().brokenPipe = false; //Set the brokenPipe bool varibale in Pressure script in Parent as false
 
+            //Depending on what number random was, certain pipes will now be active again
             if (random == 0)
             {
-
+                //first pipe fixes if its 0
                 normalPype = true;
 
             }
             if (random == 1)
             {
-
+                //second pipe fixes if its 1
                 normalPype2 = true;
 
             }
             if (random == 2)
             {
-
+                //third pipe fixes if its 2
                 normalPype3 = true;
 
             }
             if (random == 3)
             {
-
+                //fourth pipe fixes if its 3
                 normalPype4 = true;
 
             }
