@@ -3,7 +3,21 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Barrel
+  - CoalPile
+  - ReplacePipe
+  - ReplacementGear
+  - BrokenPipe
+  - BrokenGear
+  - Metal
+  - Shovel
+  - Coal
+  - WaterHitbox
+  - Hammer
+  - Fire
+  - Bucket
+  - Water
   layers:
   - Default
   - TransparentFX
@@ -11,8 +25,8 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
+  - Tool
+  - Player
   - 
   - 
   - 

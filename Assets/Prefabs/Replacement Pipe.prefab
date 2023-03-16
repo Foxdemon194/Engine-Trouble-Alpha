@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7321653007957684985}
   - component: {fileID: 5955144505116220019}
   - component: {fileID: 1387963293773944780}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Replacement Pipe
   m_TagString: ReplacePipe
   m_Icon: {fileID: 0}

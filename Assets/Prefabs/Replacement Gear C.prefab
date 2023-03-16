@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 4923139947731215784}
   - component: {fileID: 2784556375220461366}
   - component: {fileID: 37920706117961693}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Gear_C
   m_TagString: ReplacementGear
   m_Icon: {fileID: 0}
@@ -351,7 +351,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5221558485326831338}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Replacement Gear C
   m_TagString: ReplacementGear
   m_Icon: {fileID: 0}
