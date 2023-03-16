@@ -117,6 +117,7 @@ public class BoostLever : MonoBehaviour
         return false;
     }
 
+    /*
     private bool CheckGear()
     {
         if (gear.broken == true)
@@ -125,6 +126,7 @@ public class BoostLever : MonoBehaviour
         else
             return true;
     }
+    */
 
     public void Stop()
     {

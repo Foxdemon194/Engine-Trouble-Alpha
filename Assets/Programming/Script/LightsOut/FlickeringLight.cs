@@ -23,7 +23,7 @@ public class FlickeringLight : MonoBehaviour
     float t;
     float i;
 
-    void Update()
+    void FixedUpdate()
     {
         //Starts the timer
         lightTimer += Time.deltaTime;

@@ -68,12 +68,14 @@ public class Progress : MonoBehaviour
 
         progress.value += speed;
 
+        /* fix later
         if (gearController.broken == true)
         {
             speed = 0;
             countloseTime -= Time.deltaTime;
         }
-        else if (averagePressure <= 10)
+        */
+        if (averagePressure <= 10)
         {
             speed = 0;
             countloseTime -= Time.deltaTime;
