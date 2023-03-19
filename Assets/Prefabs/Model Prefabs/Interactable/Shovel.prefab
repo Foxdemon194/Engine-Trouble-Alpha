@@ -245,6 +245,37 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.29511708, y: 0.2826789, z: 0.046431962}
   m_Center: {x: -0.00000022271261, y: 0.37889373, z: -0.021796543}
+--- !u!1 &5462824313685994911
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7811601571357588731}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7811601571357588731
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5462824313685994911}
+  m_LocalRotation: {x: -0.07894509, y: -0.85787225, z: 0.13864775, w: 0.4884667}
+  m_LocalPosition: {x: 0.511, y: 0.993, z: 0.953}
+  m_LocalScale: {x: 0.9999999, y: 1.0000001, z: 0.9999999}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8616969769510740617}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8997753304667125811
 GameObject:
   m_ObjectHideFlags: 0
@@ -277,8 +308,9 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7599507943852996329}
+  - {fileID: 7811601571357588731}
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 18.361, y: 120.686, z: 0}
 --- !u!114 &-5993485530316701990
 MonoBehaviour:
@@ -294,6 +326,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sound: {fileID: 0}
   coal: {fileID: 4357761476920377511, guid: 2e51fde156abbc645a3627118840bba2, type: 3}
+  shovelOffset: {fileID: 7811601571357588731}
 --- !u!54 &-3139706157939514948
 Rigidbody:
   m_ObjectHideFlags: 0

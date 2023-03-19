@@ -8,6 +8,40 @@ public class Shovel : MonoBehaviour
     public GameObject coal;   //Refrence to the Coal GameObject
     private bool hit = true;
 
+    public float y;
+    public float z;
+
+    private void Update()
+    {
+        if (!hit)
+        {
+            if (transform.rotation.y >= y)
+            {
+                this.GetComponentInChildren<Rigidbody>().isKinematic = false;
+                this.GetComponentInChildren<Transform>().parent = this.GetComponentInChildren<Transform>();
+                hit = true;
+            }
+            if (transform.rotation.y <= -y)
+            {
+                this.GetComponentInChildren<Rigidbody>().isKinematic = false;
+                this.GetComponentInChildren<Transform>().parent = this.GetComponentInChildren<Transform>();
+                hit = true;
+            }
+            if (transform.rotation.z >= z)
+            {
+                this.GetComponentInChildren<Rigidbody>().isKinematic = false;
+                this.GetComponentInChildren<Transform>().parent = this.GetComponentInChildren<Transform>();
+                hit = true;
+            }
+            if (transform.rotation.z >= -z)
+            {
+                this.GetComponentInChildren<Rigidbody>().isKinematic = false;
+                this.GetComponentInChildren<Transform>().parent = this.GetComponentInChildren<Transform>();
+                hit = true;
+            }
+        }
+    }
+
     //On Trigger Enter collision...   
     void OnTriggerEnter(Collider other)
     {
@@ -18,6 +52,8 @@ public class Shovel : MonoBehaviour
             {
                 sound.Play();
                 GameObject a = Instantiate(coal, this.transform.position, Quaternion.identity);
+                a.transform.SetParent(this.transform);
+                a.GetComponent<Rigidbody>().isKinematic = true;
                 hit = false;
             }
         }

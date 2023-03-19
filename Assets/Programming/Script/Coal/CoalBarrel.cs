@@ -17,9 +17,12 @@ public class CoalBarrel : MonoBehaviour
     public GameObject handle1;             //Reference to the GameObject where
     public GameObject handle2;             //  the barrel is been grabed
 
+    Vector3 offsetPos;
+
     // Start is called before the first frame update
     void Start()
     {
+        offsetPos = new Vector3(transform.position.x, transform.position.y + 0.5f, transform.position.z);
         rb = GetComponent<Rigidbody>();   //Initialized the Barrel Rigibody variable
         rb.mass = 2000007;                //Set the mass so that is unmovable
     }
@@ -45,11 +48,9 @@ public class CoalBarrel : MonoBehaviour
             if (check == true) //Make use it does the following commands only once
             {
                 Destroy(gameObject);  //Destroy the barrel Object
-                Destroy(handle1);     //Destroy the handle1
-                Destroy(handle2);     //Destroy the handle2
 
                 //Instantiate the new Coal Pile
-                Instantiate(coalPile, this.transform.position, Quaternion.identity);
+                Instantiate(coalPile, offsetPos, Quaternion.identity);
 
                 check = false;  //Make use it does this only once
             }
