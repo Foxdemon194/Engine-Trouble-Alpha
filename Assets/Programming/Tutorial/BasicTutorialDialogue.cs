@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Threading.Tasks;
+using UnityEngine.SceneManagement;
 
 /// <summary>
 /// script written by Andres Lopez
@@ -10,9 +11,10 @@ using System.Threading.Tasks;
 
 public class BasicTutorialDialogue : MonoBehaviour
 {
-    int interval = 0;
-    float nextTime = 10;
-    int dialogueNumber;
+    public int interval = 0;
+    public float nextTime = 10;
+    public int dialogueNumber;
+    public int DN = 0;
 
     public AudioSource playerAudioS;
     public AudioClip clip1;
@@ -40,20 +42,27 @@ public class BasicTutorialDialogue : MonoBehaviour
     public AudioClip status1;
     public AudioClip status2;
 
+    public bool cont;
+    public bool cont2;
+
     // Start is called before the first frame update
     void Start()
     {
         dialogueNumber = 0;
+        cont = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Time.time >= nextTime)
+        if (cont == true)
         {
-            dialogueNumber++;
-            Diologue();
-            nextTime += interval;
+            if (Time.time >= nextTime)
+            {
+                dialogueNumber++;
+                Diologue();
+                nextTime += interval;
+            }
         }
     }
 
@@ -73,25 +82,27 @@ public class BasicTutorialDialogue : MonoBehaviour
         }
         if (dialogueNumber == 3)
         {
-            interval = 22;
+            interval = 18;
             playerAudioS.clip = clip3;
             playerAudioS.Play();
+            cont = false;
         }
         if (dialogueNumber == 4)
         {
-            interval = 5;
+            interval = 10;
             playerAudioS.clip = clip4;
             playerAudioS.Play();
         }
         if (dialogueNumber == 5)
         {
-            interval = 25;
+            interval = 21;
             playerAudioS.clip = clip5;
             playerAudioS.Play();
+            cont = false;
         }
         if (dialogueNumber == 6)
         {
-            interval = 3;
+            interval = 8;
             playerAudioS.clip = clip6;
             playerAudioS.Play();
         }
@@ -121,13 +132,14 @@ public class BasicTutorialDialogue : MonoBehaviour
         }
         if (dialogueNumber == 11)
         {
-            interval = 27;
+            interval = 23;
             playerAudioS.clip = clip9;
             playerAudioS.Play();
+            cont = false;
         }
         if (dialogueNumber == 12)
         {
-            interval = 14;
+            interval = 19;
             playerAudioS.clip = clip10;
             playerAudioS.Play();
         }
@@ -139,13 +151,14 @@ public class BasicTutorialDialogue : MonoBehaviour
         }
         if (dialogueNumber == 14)
         {
-            interval = 18;
+            interval = 13;
             playerAudioS.clip = clip12;
             playerAudioS.Play();
+            cont = false;
         }
         if (dialogueNumber == 15)
         {
-            interval = 15;
+            interval = 20;
             playerAudioS.clip = clip13;
             playerAudioS.Play();
         }
@@ -157,13 +170,14 @@ public class BasicTutorialDialogue : MonoBehaviour
         }
         if (dialogueNumber == 17)
         {
-            interval = 17;
+            interval = 13;
             playerAudioS.clip = clip15;
             playerAudioS.Play();
+            cont = false;
         }
         if (dialogueNumber == 18)
         {
-            interval = 16;
+            interval = 21;
             playerAudioS.clip = clip16;
             playerAudioS.Play();
         }
@@ -175,19 +189,21 @@ public class BasicTutorialDialogue : MonoBehaviour
         }
         if (dialogueNumber == 20)
         {
-            interval = 20;
+            interval = 16;
             playerAudioS.clip = clip18;
             playerAudioS.Play();
+            cont = false;
         }
         if (dialogueNumber == 21)
         {
-            interval = 10;
+            interval = 11;
             playerAudioS.clip = clip19;
             playerAudioS.Play();
+            cont = false;
         }
         if (dialogueNumber == 22)
         {
-            interval = 13;
+            interval = 18;
             playerAudioS.clip = clip20;
             playerAudioS.Play();
         }
