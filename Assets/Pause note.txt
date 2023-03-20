@@ -1,0 +1,3 @@
+Pause Canvas settings:
+Untick Pause Canvas and every other panel except Pause Panel.
+Left everything else tick.

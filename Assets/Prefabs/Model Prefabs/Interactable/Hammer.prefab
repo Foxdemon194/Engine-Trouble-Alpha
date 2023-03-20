@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8650486473234056426}
   - component: {fileID: 2085769764994717380}
   - component: {fileID: 6471992679254786480}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: pCylinder5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -255,7 +255,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9189044046982374159}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Hammer
   m_TagString: Untagged
   m_Icon: {fileID: 0}

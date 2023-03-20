@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8079203902044161380}
   - component: {fileID: 5542939327134262478}
   - component: {fileID: 6964632743541715975}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Shovel_Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -254,7 +254,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7811601571357588731}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -288,7 +288,7 @@ GameObject:
   - component: {fileID: -5993485530316701990}
   - component: {fileID: -3139706157939514948}
   - component: {fileID: 2931179777878562852}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Shovel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -326,7 +326,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sound: {fileID: 0}
   coal: {fileID: 4357761476920377511, guid: 2e51fde156abbc645a3627118840bba2, type: 3}
-  shovelOffset: {fileID: 7811601571357588731}
+  y: 0
+  z: 0
 --- !u!54 &-3139706157939514948
 Rigidbody:
   m_ObjectHideFlags: 0

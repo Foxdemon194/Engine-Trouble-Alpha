@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5649094556794103800}
   - component: {fileID: 5649094556794103803}
   - component: {fileID: 8850393772746109149}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: oilCan01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

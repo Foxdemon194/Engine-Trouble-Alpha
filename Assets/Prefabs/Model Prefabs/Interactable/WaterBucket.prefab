@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 740889605207974177}
   - component: {fileID: 2964556631423721474}
   - component: {fileID: 7822040641476479072}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: WaterBucket
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -180,7 +180,7 @@ GameObject:
   - component: {fileID: 8921918607523368331}
   - component: {fileID: 1609603494411727309}
   - component: {fileID: 8206457978912777602}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Handle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -411,7 +411,7 @@ GameObject:
   - component: {fileID: 872165799031499084}
   - component: {fileID: 198735361522959370}
   - component: {fileID: 863082205106080667}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Base
   m_TagString: Untagged
   m_Icon: {fileID: 0}

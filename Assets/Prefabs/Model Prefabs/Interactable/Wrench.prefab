@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8093382477516332323}
   - component: {fileID: 8093382477516332508}
   - component: {fileID: 5927631534237649214}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: polySurface4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -240,7 +240,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8636708945903630901}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Wrench
   m_TagString: Untagged
   m_Icon: {fileID: 0}

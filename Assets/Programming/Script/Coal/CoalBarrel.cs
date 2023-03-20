@@ -22,7 +22,6 @@ public class CoalBarrel : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        offsetPos = new Vector3(transform.position.x, transform.position.y + 0.5f, transform.position.z);
         rb = GetComponent<Rigidbody>();   //Initialized the Barrel Rigibody variable
         rb.mass = 2000007;                //Set the mass so that is unmovable
     }
@@ -30,6 +29,8 @@ public class CoalBarrel : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        offsetPos = new Vector3(transform.position.x, transform.position.y + 0.5f, transform.position.z);
+
         //If both handles are been grabed...
         if (handle1Grab == true && handle2Grab == true)
             rb.mass = 7;  //set the mass so it can be moved
