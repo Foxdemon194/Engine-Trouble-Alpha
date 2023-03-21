@@ -32,7 +32,7 @@ public class Valve : MonoBehaviour
     void Update()
     {
         //Constantly get the rotation on the Z axis
-        var z = transform.localEulerAngles.z;
+        var z = transform.localEulerAngles.y;
         
         //If the z rotation is between the Min and Max values ...
         if (z > minValue && z < maxvalue)
