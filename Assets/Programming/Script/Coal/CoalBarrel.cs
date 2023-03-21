@@ -48,6 +48,8 @@ public class CoalBarrel : MonoBehaviour
         {
             if (check == true) //Make use it does the following commands only once
             {
+                Destroy(handle1);
+                Destroy(handle2);
                 Destroy(gameObject);  //Destroy the barrel Object
 
                 //Instantiate the new Coal Pile
