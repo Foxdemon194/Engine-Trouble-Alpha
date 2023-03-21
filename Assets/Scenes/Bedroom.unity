@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -6418,7 +6418,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1372151508}
   m_LocalRotation: {x: -0.301677, y: 0.64401114, z: -0.29822183, w: 0.6366351}
-  m_LocalPosition: {x: -178, y: -514, z: -6729}
+  m_LocalPosition: {x: -337, y: -112, z: -6433}
   m_LocalScale: {x: -87.847565, y: -120.49864, z: -71.4319}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -8054,6 +8054,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1054457563586872774, guid: a338b0d446f0866469fa121960762266, type: 3}
+      propertyPath: m_LineWidth
+      value: 0.011
+      objectReference: {fileID: 0}
     - target: {fileID: 4756824501173291836, guid: a338b0d446f0866469fa121960762266, type: 3}
       propertyPath: m_Name
       value: XR Origin(Part1)
@@ -8061,6 +8065,10 @@ PrefabInstance:
     - target: {fileID: 4756824501173291836, guid: a338b0d446f0866469fa121960762266, type: 3}
       propertyPath: m_TagString
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 5179050777595211371, guid: a338b0d446f0866469fa121960762266, type: 3}
+      propertyPath: m_LineWidth
+      value: 0.011
       objectReference: {fileID: 0}
     - target: {fileID: 7514654824621794402, guid: a338b0d446f0866469fa121960762266, type: 3}
       propertyPath: m_RootOrder
@@ -8350,6 +8358,7 @@ GameObject:
   - component: {fileID: 1885101995}
   - component: {fileID: 1885101994}
   - component: {fileID: 1885101993}
+  - component: {fileID: 1885101996}
   m_Layer: 0
   m_Name: card detector
   m_TagString: Untagged
@@ -8365,7 +8374,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1885101991}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.0123, z: 0}
+  m_LocalPosition: {x: 0, y: 0.023, z: 0}
   m_LocalScale: {x: 0.17, y: 0.17, z: 0.17}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -8435,6 +8444,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1885101991}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1885101996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1885101991}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfee8245c96834c46a91286de02f2e40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1903915679
 GameObject:
   m_ObjectHideFlags: 0
@@ -10241,6 +10262,10 @@ PrefabInstance:
     - target: {fileID: 6827401472608686312, guid: 579aecdc5c66da940ad0d3ce3541b4d7, type: 3}
       propertyPath: m_Name
       value: punchCard01
+      objectReference: {fileID: 0}
+    - target: {fileID: 6827401472608686312, guid: 579aecdc5c66da940ad0d3ce3541b4d7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []

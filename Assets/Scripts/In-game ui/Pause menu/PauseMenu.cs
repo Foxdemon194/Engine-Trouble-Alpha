@@ -32,15 +32,22 @@ public class PauseMenu : MonoBehaviour
     {
         if (showButton.action.WasPressedThisFrame())
         {
-            //Time.timeScale = 0;
-            //AudioListener.pause = true;
+            if (Time.timeScale == 0)
+                Time.timeScale = 1;
+            else 
+                Time.timeScale = 0;
+            if (AudioListener.pause == true)
+                AudioListener.pause = false;
+            else
+                AudioListener.pause = true;
+
+
             pauseCanvas.SetActive(!pauseCanvas.activeSelf);
             //Cursor.lockState = CursorLockMode.None;
             //Cursor.visible = true;
             pauseCanvas.transform.position = head.position + new Vector3(head.forward.x, 0, head.forward.z).normalized * menuDistance;
+            //pauseCanvas.transform.rotation = Vector3(pauseCanvas.transform.rotation.x, head.transform.rotation.y, pauseCanvas.transform.rotation.z);
         }
-        pauseCanvas.transform.LookAt(new Vector3(head.forward.x, pauseCanvas.transform.position.y, head.forward.z));
-        pauseCanvas.transform.forward *= -1;
 
         if (subtitleToggle.isOn)
         {
@@ -54,14 +61,14 @@ public class PauseMenu : MonoBehaviour
 
     public void ResumeGame()
     {
-        //Time.timeScale = 1f;
-        //AudioListener.pause = false;
+        Time.timeScale = 1f;
+        AudioListener.pause = false;
         //Cursor.lockState = CursorLockMode.Locked;
     }
     public void RestartButton()
     {
-        //Time.timeScale = 1;
-        //AudioListener.pause = false;
+        Time.timeScale = 1;
+        AudioListener.pause = false;
         //Cursor.lockState = CursorLockMode.Locked;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 
