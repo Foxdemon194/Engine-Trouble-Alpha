@@ -46,7 +46,7 @@ public class PauseMenu : MonoBehaviour
             //Cursor.lockState = CursorLockMode.None;
             //Cursor.visible = true;
             pauseCanvas.transform.position = head.position + new Vector3(head.forward.x, 0, head.forward.z).normalized * menuDistance;
-            //pauseCanvas.transform.rotation = Vector3(pauseCanvas.transform.rotation.x, head.transform.rotation.y, pauseCanvas.transform.rotation.z);
+            pauseCanvas.transform.rotation = head.transform.rotation;
         }
 
         if (subtitleToggle.isOn)
