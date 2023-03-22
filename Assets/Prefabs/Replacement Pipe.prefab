@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 1387963293773944780}
   m_Layer: 6
   m_Name: Replacement Pipe
-  m_TagString: ReplacePipe
+  m_TagString: ReplacePipe1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

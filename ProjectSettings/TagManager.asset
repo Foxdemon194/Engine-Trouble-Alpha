@@ -6,8 +6,6 @@ TagManager:
   tags:
   - Barrel
   - CoalPile
-  - ReplacePipe
-  - ReplacementGear
   - BrokenPipe
   - BrokenGear
   - Metal
@@ -18,6 +16,10 @@ TagManager:
   - Fire
   - Bucket
   - Water
+  - ReplacePipe1
+  - ReplacePipe2
+  - ReplacePipe3
+  - ReplacementGear
   layers:
   - Default
   - TransparentFX
