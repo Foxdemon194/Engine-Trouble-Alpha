@@ -5,9 +5,8 @@ using UnityEngine;
 //Alejandro's script
 public class SpawnGear : MonoBehaviour
 {
-    public GameObject[] prefab;       //The gear that will be spawned
+    public GameObject prefab;       //The gear that will be spawned
     public float delay = 3f;          //How long it takes for a gear to spawn when one breaks
-    int rand;                         //A random number
     float t;
 
     void Update()
@@ -20,8 +19,7 @@ public class SpawnGear : MonoBehaviour
             
             if (t >= delay)
             {
-                rand = Random.Range(0, prefab.Length);
-                Instantiate(prefab[rand], this.transform.position, Quaternion.identity);
+                Instantiate(prefab, this.transform.position, Quaternion.identity);
                 t = 0;
             }
         }

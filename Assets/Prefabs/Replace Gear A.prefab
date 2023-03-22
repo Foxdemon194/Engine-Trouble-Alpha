@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &59156254414988195
+--- !u!1 &7151116699118050778
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,51 +8,51 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6595842707998685701}
-  - component: {fileID: 2237085163756098729}
-  - component: {fileID: 7786503271547286063}
-  - component: {fileID: 5704345267109131726}
-  - component: {fileID: 4923139947731215784}
-  - component: {fileID: 2784556375220461366}
-  - component: {fileID: 37920706117961693}
-  - component: {fileID: 5152979384861176406}
+  - component: {fileID: 602399460953371407}
+  - component: {fileID: 3503470542306322671}
+  - component: {fileID: 6656794162664025280}
+  - component: {fileID: 5741621283964241239}
+  - component: {fileID: 8218522727589402331}
+  - component: {fileID: 9161859433618460821}
+  - component: {fileID: 4943150456567884012}
+  - component: {fileID: 2469921592948824106}
   m_Layer: 6
-  m_Name: Gear_C
+  m_Name: Replace Gear A
   m_TagString: ReplacementGear
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6595842707998685701
+--- !u!4 &602399460953371407
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 59156254414988195}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_GameObject: {fileID: 7151116699118050778}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 10.31471, y: 10.31471, z: 10.31471}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 5221558485326831338}
-  m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &2237085163756098729
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!33 &3503470542306322671
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 59156254414988195}
-  m_Mesh: {fileID: 1790756091776483113, guid: c210bd3b993cd944684008cea23d7e3f, type: 3}
---- !u!23 &7786503271547286063
+  m_GameObject: {fileID: 7151116699118050778}
+  m_Mesh: {fileID: 6017695598383209072, guid: 38946f572d354f1468d1bf168169b310, type: 3}
+--- !u!23 &6656794162664025280
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 59156254414988195}
+  m_GameObject: {fileID: 7151116699118050778}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -66,7 +66,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c8906b14258b4394f85e8faa4190f0c3, type: 2}
+  - {fileID: 2100000, guid: 34edd338abef5294db41db1f038fb40f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -88,13 +88,13 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!54 &5704345267109131726
+--- !u!54 &5741621283964241239
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 59156254414988195}
+  m_GameObject: {fileID: 7151116699118050778}
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
@@ -104,13 +104,13 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &4923139947731215784
+--- !u!114 &8218522727589402331
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 59156254414988195}
+  m_GameObject: {fileID: 7151116699118050778}
   m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a1f8ed2e4b928484983c88b573009d1f, type: 3}
@@ -118,18 +118,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   move: 0
---- !u!82 &2784556375220461366
+--- !u!82 &9161859433618460821
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 59156254414988195}
+  m_GameObject: {fileID: 7151116699118050778}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: d788382daeb561947aa95aad11de4451, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -214,13 +214,13 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &37920706117961693
+--- !u!114 &4943150456567884012
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 59156254414988195}
+  m_GameObject: {fileID: 7151116699118050778}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
@@ -329,48 +329,16 @@ MonoBehaviour:
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
---- !u!65 &5152979384861176406
+--- !u!65 &2469921592948824106
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 59156254414988195}
+  m_GameObject: {fileID: 7151116699118050778}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.04658147, y: 0.047729626, z: 0.0061915587}
-  m_Center: {x: -0.000000013969839, y: -0.000000004656613, z: -0.000000017229468}
---- !u!1 &4845138087906722896
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5221558485326831338}
-  m_Layer: 6
-  m_Name: Replacement Gear C
-  m_TagString: ReplacementGear
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &5221558485326831338
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4845138087906722896}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 10.314706, y: 10.314706, z: 10.314706}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 6595842707998685701}
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.04658143, y: 0.047729626, z: 0.0061913407}
+  m_Center: {x: -0.00000002328307, y: 0.000000019557774, z: 0.000000014901165}

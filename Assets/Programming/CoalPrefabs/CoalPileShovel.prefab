@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5656898174053536935}
   - component: {fileID: 8146836158620489248}
   - component: {fileID: 3231519777363642810}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CoalPile_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -99,7 +99,7 @@ GameObject:
   - component: {fileID: 29019677282393158}
   - component: {fileID: 7145042119019543805}
   - component: {fileID: 4955518386267982306}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CoalPileShovel
   m_TagString: Coal
   m_Icon: {fileID: 0}
