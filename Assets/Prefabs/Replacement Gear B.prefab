@@ -12,10 +12,10 @@ GameObject:
   - component: {fileID: 1778103808105616177}
   - component: {fileID: 1485590039403962068}
   - component: {fileID: 3995266347275903868}
-  - component: {fileID: 7785858442940089963}
   - component: {fileID: 5361982096280550766}
   - component: {fileID: 8148087910926773694}
   - component: {fileID: 3171583106043706905}
+  - component: {fileID: 2490312759539022944}
   m_Layer: 6
   m_Name: Gear_B
   m_TagString: ReplacementGear
@@ -104,19 +104,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!135 &7785858442940089963
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 303741043274491851}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.023864817
-  m_Center: {x: 0.0000000027939677, y: 0.000000007450581, z: 0.000000017229468}
 --- !u!114 &5361982096280550766
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -342,6 +329,19 @@ MonoBehaviour:
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
+--- !u!65 &2490312759539022944
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 303741043274491851}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.04658147, y: 0.047729634, z: 0.0061913584}
+  m_Center: {x: 0.0000000027939677, y: 0.000000007450581, z: 0.000000017229468}
 --- !u!1 &9152235905149518770
 GameObject:
   m_ObjectHideFlags: 0

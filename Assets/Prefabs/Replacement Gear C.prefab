@@ -11,11 +11,11 @@ GameObject:
   - component: {fileID: 6595842707998685701}
   - component: {fileID: 2237085163756098729}
   - component: {fileID: 7786503271547286063}
-  - component: {fileID: 4352076042089485216}
   - component: {fileID: 5704345267109131726}
   - component: {fileID: 4923139947731215784}
   - component: {fileID: 2784556375220461366}
   - component: {fileID: 37920706117961693}
+  - component: {fileID: 5152979384861176406}
   m_Layer: 6
   m_Name: Gear_C
   m_TagString: ReplacementGear
@@ -88,19 +88,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &4352076042089485216
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 59156254414988195}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.023864813
-  m_Center: {x: 0.00000022444874, y: -0.000000019557774, z: 0.00000022118911}
 --- !u!54 &5704345267109131726
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -342,6 +329,19 @@ MonoBehaviour:
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
+--- !u!65 &5152979384861176406
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 59156254414988195}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.04658147, y: 0.047729626, z: 0.0061915587}
+  m_Center: {x: -0.000000013969839, y: -0.000000004656613, z: -0.000000017229468}
 --- !u!1 &4845138087906722896
 GameObject:
   m_ObjectHideFlags: 0

@@ -10,10 +10,6 @@ public class FixedPipeHandler : MonoBehaviour
     public GameObject[] audio;
     public GameObject[] normalPipe;  //Reference arrey to the NormalPipes GameObjects
     public GameObject[] brokenPipe;  //Reference arrey to the BrokenPipes GameObjects
-    public GameObject pype;
-    public GameObject pype2;
-    public GameObject pype3;
-    public GameObject pype4;
 
     //public bool normalPipeActive;    //Bool varibale to know the state of the normal pipes
     public bool brokenPipeActive;    //Bool varibale to know the state of the broken pipes
@@ -21,11 +17,7 @@ public class FixedPipeHandler : MonoBehaviour
 
     public bool brokenStatus;        //Bool Variblae to know when a pipe is broken
 
-    public bool normalPype;         //Bool for each pipe that chekcs if its fixed
-    public bool normalPype2;
-    public bool normalPype3;
-    public bool normalPype4;
-
+    public bool[] pipe;
 
     //Random
     public int random;               //Int varibale to hold the random number of the pipe that breaks
@@ -34,11 +26,10 @@ public class FixedPipeHandler : MonoBehaviour
     // Start is called before the first frame update
    public void Start()
     {
-
-        normalPype = true;          //sets the pipes to true since they don't start broken
-        normalPype2 = true;
-        normalPype3 = true;
-        normalPype4 = true;
+        for (int i = 0; i < pipe.Length; i++)
+        {
+            pipe[i] = true;
+        }
 
         brokenPipeActive = false;    //Set to false becouse there is no pipe broken
         //normalPipeActive = true;     //Set to true becouse there is no pipe broken
@@ -69,84 +60,18 @@ public class FixedPipeHandler : MonoBehaviour
                 checkOnce = false;//Make sure it does the following code only once
 
                 //Specific pipes will break depending on what number random becomes
-               if(random == 0)
-                {
-                    //first pipe breaks if its 0
-                    normalPype = false;
-
-                }
-                if (random == 1)
-                {
-                    //second pipe breaks if its 1
-                    normalPype2 = false;
-
-                }
-                if (random == 2)
-                {
-                    //third pipe breaks if its 2
-                    normalPype3 = false;
-
-                }
-                if (random == 3)
-                {
-                    //fourth pipe breaks if its 3
-                    normalPype4 = false;
-
-                }
+                pipe[random] = false;
             }
         }
 
-        //If the bool is false, then the pipe isn't active anymore and vice versa
-        if (normalPype == false)
+        if (!pipe[random])
         {
-
-            pype.SetActive(false);
-
+            normalPipe[random].SetActive(false);
         }
-        if (normalPype == true)
+
+        if (pipe[random])
         {
-
-            pype.SetActive(true);
-
-        }
-        //If the bool is false, then the pipe isn't active anymore and vice versa
-        if (normalPype2 == false)
-        {
-
-            pype2.SetActive(false);
-
-        }
-        if (normalPype2 == true)
-        {
-
-            pype2.SetActive(true);
-
-        }
-        //If the bool is false, then the pipe isn't active anymore and vice versa
-        if (normalPype3 == false)
-        {
-
-            pype3.SetActive(false);
-
-        }
-        if (normalPype3 == true)
-        {
-
-            pype3.SetActive(true);
-
-        }
-        //If the bool is false, then the pipe isn't active anymore and vice versa
-        if (normalPype4 == false)
-        {
-
-            pype4.SetActive(false);
-
-        }
-        if (normalPype4 == true)
-        {
-
-            pype4.SetActive(true);
-
+            normalPipe[random].SetActive(true);
         }
     }
 
@@ -160,33 +85,9 @@ public class FixedPipeHandler : MonoBehaviour
             audio[random].SetActive(false);
             GetComponentInParent<Pressure>().brokenPipe = false; //Set the brokenPipe bool varibale in Pressure script in Parent as false
 
-            //Depending on what number random was, certain pipes will now be active again
-            if (random == 0)
-            {
-                //first pipe fixes if its 0
-                normalPype = true;
-
-            }
-            if (random == 1)
-            {
-                //second pipe fixes if its 1
-                normalPype2 = true;
-
-            }
-            if (random == 2)
-            {
-                //third pipe fixes if its 2
-                normalPype3 = true;
-
-            }
-            if (random == 3)
-            {
-                //fourth pipe fixes if its 3
-                normalPype4 = true;
-
-            }
+            pipe[random] = true;
         
-        Destroy(other.gameObject);
+            Destroy(other.gameObject);
             //Destroy the GameObject that was on collision
             /*foreach (GameObject obj in steamParticles)
             {
