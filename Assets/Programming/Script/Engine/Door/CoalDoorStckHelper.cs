@@ -11,7 +11,7 @@ public class CoalDoorStckHelper : MonoBehaviour
     void OnTriggerExit(Collider other)
     {
         //If the GameObject on trigger collision has the Oil tag...
-        if (other.gameObject.tag == "Oil")
+        if (other.gameObject.tag == "Oil" )
         {
             //Set the oiled bool variable true
             oiled = true;
