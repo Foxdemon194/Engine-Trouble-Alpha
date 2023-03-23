@@ -13,7 +13,7 @@ public class SpawnGear : MonoBehaviour
     {
         //Will spawn a pipe when it finds a broken gear in the scene
         //It will spawn one of the many gear models we have
-        if (GameObject.FindGameObjectWithTag("BrokenGear") && GameObject.FindGameObjectWithTag("ReplacementGear") == null)
+        if (GameObject.FindGameObjectWithTag("ReplacementGear") == null)
         {
             t += Time.deltaTime;
             
