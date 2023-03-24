@@ -16,6 +16,8 @@ public class Bucket : MonoBehaviour
     public float speed = 1f;
     public Quaternion desirePos;
     private bool goBack = false;
+    
+    public AdjustWaterLevel AdjustWaterLevel;
 
     // Start is called before the first frame update
     void Start()
@@ -48,6 +50,7 @@ public class Bucket : MonoBehaviour
         {
             if (!water.isPlaying)
             {
+                AdjustWaterLevel.IsFull = true;
                 water.Play();
             }
             if (grabBase == true)
@@ -63,6 +66,7 @@ public class Bucket : MonoBehaviour
         {
             if (water.isPlaying)
             {
+                AdjustWaterLevel.IsFull = false;
                 water.Stop();
             }
             baseBucket.constraints = RigidbodyConstraints.None;

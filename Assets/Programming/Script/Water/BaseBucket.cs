@@ -11,6 +11,7 @@ public class BaseBucket : MonoBehaviour
     public ParticleSystem waterOutR;
     public ParticleSystem waterOutL;
     public GameObject waterHitbox;
+    public AdjustWaterLevel AdjustWaterLevel;
 
     //public Quaternion desirePos;
     //public float speed = 1f;
@@ -72,6 +73,7 @@ public class BaseBucket : MonoBehaviour
         waterOutR.Stop();
         waterOutL.Stop();
         waterHitbox.SetActive(false);
+        AdjustWaterLevel.IsFull = false;
     }
 
     void OnCollisionEnter(Collision other)
