@@ -266,4 +266,10 @@ public class BasicTutorialDialogue : MonoBehaviour
             cont = true;
         }
     }
+
+    public void Grabbed()
+    {
+        continousPlay = true;
+        cont = true;
+    }
 }

@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3666486659217251244}
   - component: {fileID: 7792922411104738178}
   - component: {fileID: 8355977967815000003}
+  - component: {fileID: 5904861174270689833}
   m_Layer: 6
   m_Name: Replacement
   m_TagString: Fuse
@@ -34,7 +35,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &6290276300892451247
 MeshFilter:
@@ -231,3 +232,16 @@ MonoBehaviour:
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
+--- !u!65 &5904861174270689833
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7759570002780349616}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.18203478, y: 0.15764658, z: 0.05}
+  m_Center: {x: 0, y: 0, z: 0.07}
