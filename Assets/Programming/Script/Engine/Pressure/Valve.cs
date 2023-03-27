@@ -18,14 +18,15 @@ public class Valve : MonoBehaviour
     public float timetoStop;              //Float to Count the time to Rust
     public float setTimeToStopHigh;       //Float to set the Max time to Rust
     public float setTimeToStopLow;        //Float to set the Min time to Rust
-    public GameObject rust;               //Reference to the RustedNob GameObject(for now)
+    public Material rust;
+    public Material reg;
     HingeJoint hinge;                     //Reference to the HingeJoint component
 
     void Start()
     {
         originalPos = transform.rotation;                              //Set the Quternion originalPos to the Object original rotation
         hinge = GetComponent<HingeJoint>();                            //Initianlize the HingeJoint varibale
-        rust.SetActive(false);                                         //Set the RustedNob GameObject as false
+        reg = gameObject.GetComponent<Renderer>().material;
         timetoStop = Random.Range(setTimeToStopLow, setTimeToStopHigh);//Randomly set the time to Rust based on the Max and Min times
     }
 
@@ -65,7 +66,7 @@ public class Valve : MonoBehaviour
                 limits.min = 0;                     //Set the min limit to 0
                 limits.max = 0;                     //Set the max limit to 0
                 hinge.limits = limits;              //Assign the limits to the HingeJoint
-                rust.SetActive(true);               //Set the RustedNob as true
+                gameObject.GetComponent<Renderer>().material = rust;
             }
             //Else if timetoStop above or equal to 0..
             else if (timetoStop > 0)
@@ -74,7 +75,7 @@ public class Valve : MonoBehaviour
                 limits.min = -179;                 //Set the min limit to 0
                 limits.max = 179;                  //Set the max limit to 0
                 hinge.limits = limits;             //Assign the limits to the HingeJoint
-                rust.SetActive(false);             //Set the RustedNob as false
+                gameObject.GetComponent<Renderer>().material = reg;
             }
         }      
     }
