@@ -79,7 +79,7 @@ public class FixedPipeHandler : MonoBehaviour
     public void OnCollisionEnter(Collision other)
     {
         //.. if brokenPipeActive bool varibale is fasle and the object on collision has the "ReplacePipe" tag
-        if (brokenPipeActive == false && other.gameObject.tag == "ReplacePipe")
+        if (brokenPipeActive == false && other.gameObject.tag == "ReplacePipe1" || brokenPipeActive == false && other.gameObject.tag == "ReplacePipe2" || brokenPipeActive == false && other.gameObject.tag == "ReplacePipe3")
         {
             normalPipe[random].SetActive(true);                  //Set the correct normal pipe Game Object as true
             audio[random].SetActive(false);
