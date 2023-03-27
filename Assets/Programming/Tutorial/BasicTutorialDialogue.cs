@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 /// <summary>
 /// script written by Andres Lopez
 /// adjusted / implemented by Ralfo (Tony) Manzur
+/// with help from Joshua Rosa and Pedro Terra
 /// </summary>
 
 public class BasicTutorialDialogue : MonoBehaviour
@@ -41,15 +42,12 @@ public class BasicTutorialDialogue : MonoBehaviour
     public AudioClip clip22;
     public AudioClip status1;
     public AudioClip status2;
-    public AudioClip blank1;
-    public AudioClip blank2;
-    public AudioClip blank3;
-    public AudioClip blank4;
-    public AudioClip blank5;
-    public AudioClip blank6;
-    public AudioClip blank7;
+
+    public float Timer = 0.0f;
 
     public bool cont;
+
+    public bool continousPlay;
     //public bool cont2;
 
     // Start is called before the first frame update
@@ -57,12 +55,13 @@ public class BasicTutorialDialogue : MonoBehaviour
     {
         dialogueNumber = 0;
         cont = true;
+        continousPlay = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (cont == true)
+        /*if (cont == true)
         {
             if (Time.time >= nextTime)
             {
@@ -70,13 +69,34 @@ public class BasicTutorialDialogue : MonoBehaviour
                 Diologue();
                 nextTime += interval;
             }
+        }*/
+
+        if (cont == true)
+        {
+            if (Timer <= interval)
+            {
+                Timer += Time.deltaTime;
+            }
+            else
+            {
+                dialogueNumber++;
+                cont = false;
+                if (continousPlay == true)
+                {
+                    Diologue();
+                }
+            }
         }
     }
 
     public void Diologue()
     {
+        Timer = 0.0f;
+        cont = true;
         if (dialogueNumber == 1)
         {
+            continousPlay = true;
+            Timer = 0.0f;
             interval = 16;
             playerAudioS.clip = clip1;
             playerAudioS.Play();
@@ -92,13 +112,7 @@ public class BasicTutorialDialogue : MonoBehaviour
             interval = 18;
             playerAudioS.clip = clip3;
             playerAudioS.Play();
-            cont = false;
-        }
-        if (dialogueNumber == 4)
-        {
-            interval = 3;
-            playerAudioS.clip = blank1;
-            playerAudioS.Play();
+            continousPlay = false;
         }
         if (dialogueNumber == 5)
         {
@@ -111,13 +125,7 @@ public class BasicTutorialDialogue : MonoBehaviour
             interval = 21;
             playerAudioS.clip = clip5;
             playerAudioS.Play();
-            cont = false;
-        }
-        if (dialogueNumber == 7)
-        {
-            interval = 3;
-            playerAudioS.clip = blank2;
-            playerAudioS.Play();
+            continousPlay = false;
         }
         if (dialogueNumber == 8)
         {
@@ -154,13 +162,7 @@ public class BasicTutorialDialogue : MonoBehaviour
             interval = 23;
             playerAudioS.clip = clip9;
             playerAudioS.Play();
-            cont = false;
-        }
-        if (dialogueNumber == 14)
-        {
-            interval = 3;
-            playerAudioS.clip = blank3;
-            playerAudioS.Play();
+            continousPlay = false;
         }
         if (dialogueNumber == 15)
         {
@@ -179,13 +181,7 @@ public class BasicTutorialDialogue : MonoBehaviour
             interval = 13;
             playerAudioS.clip = clip12;
             playerAudioS.Play();
-            cont = false;
-        }
-        if (dialogueNumber == 18)
-        {
-            interval = 3;
-            playerAudioS.clip = blank4;
-            playerAudioS.Play();
+            continousPlay = false;
         }
         if (dialogueNumber == 19)
         {
@@ -204,13 +200,7 @@ public class BasicTutorialDialogue : MonoBehaviour
             interval = 13;
             playerAudioS.clip = clip15;
             playerAudioS.Play();
-            cont = false;
-        }
-        if (dialogueNumber == 22)
-        {
-            interval = 3;
-            playerAudioS.clip = blank5;
-            playerAudioS.Play();
+            continousPlay = false;
         }
         if (dialogueNumber == 23)
         {
@@ -229,26 +219,14 @@ public class BasicTutorialDialogue : MonoBehaviour
             interval = 16;
             playerAudioS.clip = clip18;
             playerAudioS.Play();
-            cont = false;
-        }
-        if (dialogueNumber == 26)
-        {
-            interval = 3;
-            playerAudioS.clip = blank6;
-            playerAudioS.Play();
+            continousPlay = false;
         }
         if (dialogueNumber == 27)
         {
             interval = 6;
             playerAudioS.clip = clip19;
             playerAudioS.Play();
-            cont = false;
-        }
-        if (dialogueNumber == 28)
-        {
-            interval = 3;
-            playerAudioS.clip = blank7;
-            playerAudioS.Play();
+            continousPlay = false;
         }
         if (dialogueNumber == 29)
         {
@@ -267,6 +245,25 @@ public class BasicTutorialDialogue : MonoBehaviour
             interval = 15;
             playerAudioS.clip = clip22;
             playerAudioS.Play();
+        }
+    }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        if (gameObject.name == "HammerScripted")
+        {
+            continousPlay = true;
+            cont = true;
+        }
+        if (gameObject.name == "WrenchScripted")
+        {
+            continousPlay = true;
+            cont = true;
+        }
+        if (gameObject.name == "ShovelScripted")
+        {
+            continousPlay = true;
+            cont = true;
         }
     }
 }
