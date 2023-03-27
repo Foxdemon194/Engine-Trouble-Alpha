@@ -19,6 +19,8 @@ public class LightsOut : MonoBehaviour
 
     public bool brokenFuse = false;//Public bool variable know when a fuse is broken
 
+    public AudioSource sound;
+
     float timer = 0;
     bool goTimer = false;
 
@@ -103,6 +105,7 @@ public class LightsOut : MonoBehaviour
             lights[i].GetComponent<FlickeringLight>().enabled = false;
         }
 
+        sound.Play();
         goTimer = true;       
     }
 

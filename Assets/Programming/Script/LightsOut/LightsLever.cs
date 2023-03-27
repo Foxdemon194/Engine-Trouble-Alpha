@@ -48,7 +48,7 @@ public class LightsLever : MonoBehaviour
         var x = transform.localEulerAngles.x;
 
         //If X rotation is higer then 70... 
-        if (x >= 70)
+        if (x >= 40)
         {
             //... if brokenFuse bool variable in LightsOut script is false..
             if (lights.GetComponent<LightsOut>().brokenFuse == false)
