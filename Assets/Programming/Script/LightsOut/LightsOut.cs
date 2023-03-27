@@ -7,7 +7,7 @@ public class LightsOut : MonoBehaviour
     public Light[] redlights;
     public Light[] lights;                //Reference to the Light arrey 
     public float lowIntensity = 0.2f;     //Public Float variable to set the low intensity of the lights
-    public float normalIntensity = 0.6f; //Public Float variable to set the normal intensity of the lights
+    public float[] normalIntensity; //Public Float variable to set the normal intensity of the lights
 
     private int time = 0;                 //Int variable to countdown time
     public int[] timeBreak;               //Public Int variable to store the break time frames
@@ -17,7 +17,7 @@ public class LightsOut : MonoBehaviour
     public Collider[] fusesColliders;     //Public Collider arrey to hold the Fuses Colliders
     private int randomFuse;               //Int to select a random fuse
 
-    public static bool brokenFuse = false;//Public bool variable know when a fuse is broken
+    public bool brokenFuse = false;//Public bool variable know when a fuse is broken
 
     float timer = 0;
     bool goTimer = false;
@@ -25,6 +25,11 @@ public class LightsOut : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        for (int i = 0; i < normalIntensity.Length; i++)
+        {
+            normalIntensity[i] = lights[i].intensity;
+        }
+
         //Set a random time frame to break
         random = Random.Range(0, timeBreak.Length);
         //Deactivate the colliders
@@ -58,10 +63,11 @@ public class LightsOut : MonoBehaviour
             timer += Time.deltaTime;
             if (timer >= 1f)
             {
-                foreach (Light obj in redlights)
+                for (int i = 0; i < redlights.Length; i++)
                 {
-                    obj.intensity = 0.2f;
+                    redlights[i].GetComponent<Light>().intensity = lowIntensity;
                 }
+
                 goTimer = false;
                 timer = 0f;
             }
@@ -91,9 +97,10 @@ public class LightsOut : MonoBehaviour
     private void LowLights()
     {
         //Set the intensity od every light to lowIntensity
-        foreach (Light obj in lights)
+        for (int i = 0; i < lights.Length; i++)
         {
-            obj.intensity = 0f;
+            lights[i].GetComponent<Light>().intensity = 0;
+            lights[i].GetComponent<FlickeringLight>().enabled = false;
         }
 
         goTimer = true;       
@@ -102,18 +109,19 @@ public class LightsOut : MonoBehaviour
     public void NormalLights()
     {
         //Set the intensity od every light to normalIntensity
-        foreach (Light obj in lights)
+        for (int i = 0; i < lights.Length; i++)
         {
-            obj.intensity = normalIntensity;
+            lights[i].GetComponent<Light>().intensity = normalIntensity[i];
         }
         //Restet time and randomized time to break
         time = 0;
         random = Random.Range(0, timeBreak.Length);
 
         ////////////////////////////////////////////
-        foreach (Light obj in redlights)
+        for (int i = 0; i < redlights.Length; i++)
         {
-            obj.intensity = 0f;
+            redlights[i].GetComponent<Light>().intensity = 0;
+            lights[i].GetComponent<FlickeringLight>().enabled = true;
         }
     }
 }

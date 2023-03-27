@@ -8,7 +8,7 @@ public class LightsLever : MonoBehaviour
     Quaternion originalPos;   //Refrence to the Quaternion varible to store the Object original rotation
     public float speed = 1f;  //Public float to ste the speed at which the object Moves
 
-    public LightsOut lights;  //Reference to the LightsOut script 
+    public GameObject lights;  //Reference to the LightsOut script 
 
     bool goBack = false;      //Bool variable to know when go back to the original position
 
@@ -51,9 +51,9 @@ public class LightsLever : MonoBehaviour
         if (x >= 70)
         {
             //... if brokenFuse bool variable in LightsOut script is false..
-            if (LightsOut.brokenFuse == false)
+            if (lights.GetComponent<LightsOut>().brokenFuse == false)
             {
-                lights.NormalLights(); //.. call NormalLights() function in LightsOut script
+                lights.GetComponent<LightsOut>().NormalLights(); //.. call NormalLights() function in LightsOut script
                 breakerSound.Play();
             }
         }

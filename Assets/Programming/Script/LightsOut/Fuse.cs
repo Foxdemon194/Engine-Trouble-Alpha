@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class Fuse : MonoBehaviour
 {
-    //On Collision Enter..
-    void OnCollisionEnter(Collision other)
+    //On Trigger Enter..
+    void OnTriggerEnter(Collider other)
     {
         //if the object colliding has the "Fuse" tag
         if (other.gameObject.tag == "Fuse")
         {
-            LightsOut.brokenFuse = false;  //Set the brokenFuse bool variable in the LightsOut script
+            GetComponentInParent<LightsOut>().brokenFuse = false;  //Set the brokenFuse bool variable in the LightsOut script
             Destroy(other.gameObject);     //Destroy the colliding GameObject
         }
     }
