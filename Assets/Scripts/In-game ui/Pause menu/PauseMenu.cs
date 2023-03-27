@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class PauseMenu : MonoBehaviour
 {
     public Toggle subtitleToggle;
-    public Text subtitleText;
+    //public Text subtitleText;
     public GameObject pauseCanvas;
 
     public InputActionProperty showButton;
@@ -51,11 +51,11 @@ public class PauseMenu : MonoBehaviour
 
         if (subtitleToggle.isOn)
         {
-            subtitleText.enabled = true;
+            //subtitleText.enabled = true;
         }
         else if (!subtitleToggle.isOn)
         {
-            subtitleText.enabled = false;
+            //subtitleText.enabled = false;
         }
     }
 
