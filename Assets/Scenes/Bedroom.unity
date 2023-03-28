@@ -4668,7 +4668,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &837123029
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8754,9 +8754,9 @@ RectTransform:
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 837123029}
-  - {fileID: 793718287}
   - {fileID: 1372151509}
   - {fileID: 1762891687}
+  - {fileID: 793718287}
   m_Father: {fileID: 58312583}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 90.66, y: 0, z: 90}
@@ -10971,8 +10971,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'To enter the level, press
 
-    "Level 1" to spawn in the punch card. Then
-    bring the punch card to the punch card machine.'
+    "Level 1" to spawn in the punch card. The
+    card will spawn next to the machine and then you can insert it to start.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -11175,7 +11175,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1155370401305489977, guid: a338b0d446f0866469fa121960762266, type: 3}
       propertyPath: m_RaycastMask.m_Bits
-      value: 32
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4756824501173291836, guid: a338b0d446f0866469fa121960762266, type: 3}
       propertyPath: m_Name
@@ -11235,7 +11235,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7654296484454388778, guid: a338b0d446f0866469fa121960762266, type: 3}
       propertyPath: m_RaycastMask.m_Bits
-      value: 32
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
