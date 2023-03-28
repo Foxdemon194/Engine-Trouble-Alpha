@@ -3,11 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.InputSystem;
 public class TitleScene : MonoBehaviour
 {
     public Animator animator;
     Scene currentScene;
     public AudioSource TitleScreenAmbience;
+    public InputActionProperty showButton;
 
     void Start()
     {
@@ -18,7 +20,7 @@ public class TitleScene : MonoBehaviour
     {
         if (currentScene.name == "Title")
         {
-            if (Input.anyKeyDown)
+            if (showButton.action.WasPressedThisFrame())
             {
                 FadeToLevel(1);
             }
