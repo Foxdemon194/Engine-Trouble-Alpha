@@ -28,8 +28,6 @@ public class CoalDoor : MonoBehaviour
     public CoalDoorStckHelper doorCollider1;   //Reference to the CoalDoorStckHelper scipt to put oil on the hanldes
     public CoalDoorStckHelper doorCollider2;   //Reference to the CoalDoorStckHelper scipt to put oil on the hanldes
 
-    
-
     void Start()
     {
         currentPos.y = transform.rotation.y;
@@ -51,7 +49,7 @@ public class CoalDoor : MonoBehaviour
         //If the Objects Position is equal to the Original position...
         if (originalPos == transform.rotation)
         {
-            goBack = false; //... set bool goBack to false
+            Stop(); //... set bool goBack to false
             if (goSound == true)
             {
                 sound.clip = closeDoor;
@@ -88,7 +86,7 @@ public class CoalDoor : MonoBehaviour
             //If timetoStop is less or equal to 0...
             if (timetoStop <= 0)
             {
-                transform.rotation = Quaternion.Slerp(transform.rotation, originalPos, Time.time * 2f); //... close the door and keep it close
+                goBack = true; //... close the door and keep it close
                 handle.enabled = false;  //Desable the XRGrabInteractable script
                 rust.SetActive(true);    //Set RustedDoor GameObject to true
                 stuck = true;            //Set the bool stuck to true

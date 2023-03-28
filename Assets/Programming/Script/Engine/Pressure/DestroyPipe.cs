@@ -12,6 +12,9 @@ public class DestroyPipe : MonoBehaviour
 
     Rigidbody rb;              //Variable for hammer Rigidgody
 
+    int tutorial = 0;
+    public GameObject tutorialDialogue;
+
     void OnCollisionEnter(Collision other)
     {
         rb = other.gameObject.GetComponent<Rigidbody>();  //Assign Rigidbody to variable on collision
@@ -23,6 +26,12 @@ public class DestroyPipe : MonoBehaviour
             //steamParticles.SetActive(true);
             //Set the brokenPipeActive bool varibale in FixedPipeHandler script as false
             holder.GetComponent<FixedPipeHandler>().brokenPipeActive = false;
+
+            if (tutorial <= 0)
+            {
+                tutorialDialogue.GetComponent<BasicTutorialDialogue>().Pipe();
+                tutorial++;
+            }
         }
         else if(other.gameObject.tag == "Wall" && other.gameObject.tag == "Player")
         {

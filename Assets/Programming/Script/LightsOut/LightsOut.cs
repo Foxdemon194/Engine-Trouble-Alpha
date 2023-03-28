@@ -6,7 +6,7 @@ public class LightsOut : MonoBehaviour
 {
     public Light[] redlights;
     public Light[] lights;                //Reference to the Light arrey 
-    public float lowIntensity = 0.2f;     //Public Float variable to set the low intensity of the lights
+    public float[] intensity;     //Public Float variable to set the low intensity of the lights
     public float[] normalIntensity; //Public Float variable to set the normal intensity of the lights
 
     private int time = 0;                 //Int variable to countdown time
@@ -67,7 +67,7 @@ public class LightsOut : MonoBehaviour
             {
                 for (int i = 0; i < redlights.Length; i++)
                 {
-                    redlights[i].GetComponent<Light>().intensity = lowIntensity;
+                    redlights[i].GetComponent<Light>().intensity = intensity[i];
                 }
 
                 goTimer = false;
