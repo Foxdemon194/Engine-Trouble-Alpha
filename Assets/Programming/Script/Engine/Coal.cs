@@ -10,6 +10,8 @@ public class Coal : MonoBehaviour
     private float fuelAmount;    //Float variable to the Coal Level in EngineManager
     private float fuelIncrease;  //Float variable to the increase the Coal Level in EngineManager
 
+    public GameObject tutorialDialogue;
+
     //Constantly takes the values from their respective counterparts and gives them to the new variables
     void Update()
     {
@@ -18,14 +20,19 @@ public class Coal : MonoBehaviour
     }
 
     //On Collision Enter...
-    void OnCollisionEnter(Collision other)
+    private void OnTriggerEnter(Collider other)
     {
         //If the object in collision has the "Coal" tag..
-        if (other.gameObject.tag == "Coal")     
+        if (other.gameObject.tag == "Coal")
         {
             Destroy(other.gameObject);  //Destroy the object on collision
             fuelAmount = fuelAmount + fuelIncrease;   //Increse the Coal Level in EngineManger by the set variable
             GetComponentInParent<EngineManager>().coalLevel = fuelAmount;
+
+            if (tutorialDialogue.GetComponent<BasicTutorialDialogue>().dialogueNumber <= 14 && tutorialDialogue.GetComponent<BasicTutorialDialogue>().dialogueNumber > 12)
+            {
+                tutorialDialogue.GetComponent<BasicTutorialDialogue>().Continue();
+            }
         }
     }
 }

@@ -22,6 +22,8 @@ public class Valve : MonoBehaviour
     public Material reg;
     HingeJoint hinge;                     //Reference to the HingeJoint component
 
+    public GameObject tutorialDialogue;
+
     void Start()
     {
         originalPos = transform.rotation;                              //Set the Quternion originalPos to the Object original rotation
@@ -44,6 +46,10 @@ public class Valve : MonoBehaviour
         }
         else //if not ...
         {
+            if (tutorialDialogue.GetComponent<BasicTutorialDialogue>().dialogueNumber <= 7 && tutorialDialogue.GetComponent<BasicTutorialDialogue>().dialogueNumber > 6)
+            {
+                tutorialDialogue.GetComponent<BasicTutorialDialogue>().Continue();
+            }
             pressure.sPressure -= depletionSpeed;  //Decrese the current pressure in Pressure script but the set amount per frame
             if (goSound == true)
             {

@@ -50,9 +50,6 @@ public class BasicTutorialDialogue : MonoBehaviour
     public bool cont;
 
     public bool continousPlay;
-
-    public bool pipeCont;
-    public bool wrenchCont;
     //public bool cont2;
 
     // Start is called before the first frame update
@@ -132,7 +129,7 @@ public class BasicTutorialDialogue : MonoBehaviour
             continousPlay = false;
             //check when barrel breaks or pipes
         }
-        if (dialogueNumber == 5 && pipeCont)
+        if (dialogueNumber == 5)
         {
             interval = 5;
             speaker1.clip = clip4;
@@ -141,7 +138,6 @@ public class BasicTutorialDialogue : MonoBehaviour
             speaker2.Play();
             speaker3.clip = clip4;
             speaker3.Play();
-            pipeCont = false;
         }
         if (dialogueNumber == 6)
         {
@@ -174,6 +170,7 @@ public class BasicTutorialDialogue : MonoBehaviour
             speaker2.Play();
             speaker3.clip = clip7;
             speaker3.Play();
+            //mentions oil
         }
         if (dialogueNumber == 10)
         {
@@ -217,6 +214,7 @@ public class BasicTutorialDialogue : MonoBehaviour
             speaker3.clip = clip9;
             speaker3.Play();
             continousPlay = false;
+            //adding coal to boiler
         }
         if (dialogueNumber == 15)
         {
@@ -248,6 +246,7 @@ public class BasicTutorialDialogue : MonoBehaviour
             speaker3.clip = clip12;
             speaker3.Play();
             continousPlay = false;
+            //Water input
         }
         if (dialogueNumber == 19)
         {
@@ -279,6 +278,7 @@ public class BasicTutorialDialogue : MonoBehaviour
             speaker3.clip = clip15;
             speaker3.Play();
             continousPlay = false;
+            //Wrench and valves again
         }
         if (dialogueNumber == 23)
         {
@@ -310,6 +310,7 @@ public class BasicTutorialDialogue : MonoBehaviour
             speaker3.clip = clip18;
             speaker3.Play();
             continousPlay = false;
+            //Boost lever
         }
         if (dialogueNumber == 27)
         {
@@ -321,6 +322,7 @@ public class BasicTutorialDialogue : MonoBehaviour
             speaker3.clip = clip19;
             speaker3.Play();
             continousPlay = false;
+            //fire
         }
         if (dialogueNumber == 29)
         {
@@ -354,9 +356,8 @@ public class BasicTutorialDialogue : MonoBehaviour
         }
     }
 
-    public void Pipe()
+    public void Continue()
     {
-        pipeCont = true;
         continousPlay = true;
         cont = true;
     }
