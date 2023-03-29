@@ -50,6 +50,10 @@ public class Valve : MonoBehaviour
             {
                 tutorialDialogue.GetComponent<BasicTutorialDialogue>().Continue();
             }
+            if (tutorialDialogue.GetComponent<BasicTutorialDialogue>().dialogueNumber <= 22 && tutorialDialogue.GetComponent<BasicTutorialDialogue>().dialogueNumber > 21)
+            {
+                tutorialDialogue.GetComponent<BasicTutorialDialogue>().Continue();
+            }
             pressure.sPressure -= depletionSpeed;  //Decrese the current pressure in Pressure script but the set amount per frame
             if (goSound == true)
             {

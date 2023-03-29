@@ -55,6 +55,12 @@ public class BreakGear : MonoBehaviour
                 obj.move = 0; //change the speed of rotation to 0 
             }
             //progress.speed = 0; //Set the speed in the Progress script to 0
+            
+            for (int i = 0; i < gears.Length; i++)
+            {
+                gears[i].gameObject.GetComponent<AudioSource>().Stop();
+            }
+
             normalGear[rand].SetActive(false); //Set normalgear GameObject as false
             brokenGear[rand].SetActive(true);
         }
@@ -87,6 +93,10 @@ public class BreakGear : MonoBehaviour
             //If setToFix varibale is true..
             if (setToFix == true)
             {
+                for (int i = 0; i < gears.Length; i++)
+                {
+                    gears[i].gameObject.GetComponent<AudioSource>().Play();
+                }
                 brokenGear[rand].SetActive(false); //Set brokenGear GameObject as true
                 normalGear[rand].SetActive(true); //Set normalGear GameObject as true
                 broken[rand] = false;             //Set the broken varibale as false
