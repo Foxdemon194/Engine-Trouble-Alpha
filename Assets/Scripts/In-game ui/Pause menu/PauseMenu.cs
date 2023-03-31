@@ -76,6 +76,8 @@ public class PauseMenu : MonoBehaviour
 
     public void QuitToMenu()
     {
+        Time.timeScale = 1;
+        AudioListener.pause = false;
         SceneManager.LoadScene("Bedroom");
     }
 

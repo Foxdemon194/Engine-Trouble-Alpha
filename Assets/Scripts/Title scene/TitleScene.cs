@@ -18,11 +18,12 @@ public class TitleScene : MonoBehaviour
 
     void Update()
     {
-        if (currentScene.name == "Title")
+        if (currentScene.name == "Title") //to disable repeating transition in the main game
         {
             if (showButton.action.WasPressedThisFrame())
             {
                 FadeToLevel(1);
+                
             }
         }
     }
@@ -30,7 +31,7 @@ public class TitleScene : MonoBehaviour
     {
         StartCoroutine(lowerAmbience());
         animator.SetTrigger("FadeOut");
-        
+
     }
     IEnumerator lowerAmbience()
     {
@@ -43,6 +44,6 @@ public class TitleScene : MonoBehaviour
 
     public void LoadScene()
     {
-        SceneManager.LoadScene("Level1");                 //change
+        SceneManager.LoadScene("Bedroom");                 
     }
 }

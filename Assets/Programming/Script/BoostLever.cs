@@ -15,10 +15,10 @@ public class BoostLever : MonoBehaviour
     public float minimunSteamAmountToUse = 30f;
     public float maximinSteamAmountToUse = 80f;
 
-    public float decreaseSpeedCoal;
-    public float decreaseSpeedWater;
-    public float increaseSpeedSteam;
-    public float increaseSpeedProgress;
+    public float decreaseSpeedCoal = 75;
+    public float decreaseSpeedWater = 75;
+    public float increaseSpeedSteam = 50;
+    public float increaseSpeedProgress = 0.05f;
 
     private bool goBack;
     Quaternion originalPos;
@@ -117,16 +117,18 @@ public class BoostLever : MonoBehaviour
         return false;
     }
 
-    /*
     private bool CheckGear()
     {
-        if (gear.broken == true)
-            return false;
+        for (int i = 0; i < gear.broken.Length; i++)
+        {
+            if (gear.broken[i])
+            {
+                return false;
+            }
+        }
 
-        else
-            return true;
+        return true;
     }
-    */
 
     public void Stop()
     {
