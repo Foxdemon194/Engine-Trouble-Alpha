@@ -12,7 +12,8 @@ public class Valve : MonoBehaviour
     public Pressure pressure;             //Reference to the Pressure script 
 
     Quaternion originalPos;               //Qaternion varibale to hold the origianl position of the object
-    public float speed = 1f;              //Public floar varibale to set the speed of movement
+    public float timeElapsed;
+    public float duration = 1f;
 
     public bool activateRust = false;     //Activate or deactivate Rust Funtionality
     public float timetoStop;              //Float to Count the time to Rust
@@ -60,7 +61,7 @@ public class Valve : MonoBehaviour
                 sound.Play();
                 goSound = false;
             }           
-            Invoke("MoveBack", 2f);                //Invoke the MoveBack() function with 2 seconds delay
+            Invoke("MoveBack", 3f);                //Invoke the MoveBack() function with 3 seconds delay
         }
 
         //If Rust functionality is active
@@ -71,12 +72,21 @@ public class Valve : MonoBehaviour
             //If timetoStop below or equal to 0..
             if (timetoStop <= 0)
             {
-                transform.rotation = Quaternion.Slerp(transform.rotation, originalPos, Time.time * 2);
-                JointLimits limits = hinge.limits;  //Create a JointLimits varibale
-                limits.min = 0;                     //Set the min limit to 0
-                limits.max = 0;                     //Set the max limit to 0
-                hinge.limits = limits;              //Assign the limits to the HingeJoint
-                gameObject.GetComponent<Renderer>().material = rust;
+                if (timeElapsed < duration)
+                {
+                    transform.rotation = Quaternion.Slerp(transform.rotation, originalPos, timeElapsed / (duration * 2));
+                    timeElapsed += Time.deltaTime;
+                }
+                else
+                {
+                    transform.rotation = originalPos;
+                    timeElapsed = 0; 
+                    JointLimits limits = hinge.limits;  //Create a JointLimits varibale
+                    limits.min = 0;                     //Set the min limit to 0
+                    limits.max = 0;                     //Set the max limit to 0
+                    hinge.limits = limits;              //Assign the limits to the HingeJoint
+                    gameObject.GetComponent<Renderer>().material = rust;
+                }
             }
             //Else if timetoStop above or equal to 0..
             else if (timetoStop > 0)
@@ -93,7 +103,16 @@ public class Valve : MonoBehaviour
     //Move the nob to it's original position
     void MoveBack()
     {
-        transform.rotation = Quaternion.Slerp(transform.rotation, originalPos, Time.time * speed);
+        if (timeElapsed < duration)
+        {
+            transform.rotation = Quaternion.Slerp(transform.rotation, originalPos, timeElapsed / duration);
+            timeElapsed += Time.deltaTime;
+        }
+        else
+        {
+            transform.rotation = originalPos;
+            timeElapsed = 0;
+        }
         //NOTE the speed has to be slow so it does not move back while the player is moving it
     }
 

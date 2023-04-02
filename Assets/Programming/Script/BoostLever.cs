@@ -20,9 +20,14 @@ public class BoostLever : MonoBehaviour
     public float increaseSpeedSteam = 50;
     public float increaseSpeedProgress = 0.05f;
 
-    private bool goBack;
+    public bool goBack;
     Quaternion originalPos;
-    public float speed = 1f;
+    public float timeElapsed;
+    public float duration = 1f;
+
+    public HingeJoint hinge;
+
+    public GameObject tutorialDialogue;
 
     // Start is called before the first frame update
     void Start()
@@ -35,10 +40,15 @@ public class BoostLever : MonoBehaviour
     {
         var z = transform.localEulerAngles.z;
 
-        if(CheckCoalLevel() && CheckWaterLevel() && CheckPressureLevel())
+        if(CheckCoalLevel() && CheckWaterLevel() && CheckPressureLevel() && CheckGear())
         {
             if (z >= 15)
             {
+                if (tutorialDialogue.GetComponent<BasicTutorialDialogue>().dialogueNumber <= 26 && tutorialDialogue.GetComponent<BasicTutorialDialogue>().dialogueNumber > 25)
+                {
+                    tutorialDialogue.GetComponent<BasicTutorialDialogue>().Continue();
+                }
+
                 foreach (EngineManager obj in coal)
                 {
                     obj.coalLevel -= decreaseSpeedCoal;
@@ -54,12 +64,22 @@ public class BoostLever : MonoBehaviour
                 }
 
                 progress.speed = increaseSpeedProgress;
+                progress.bostLever = true;
             }
         }
    
         if (goBack == true)
         {
-            transform.rotation = Quaternion.Slerp(transform.rotation, originalPos, Time.time * speed);
+            if (timeElapsed < duration)
+            {
+                transform.rotation = Quaternion.Slerp(transform.rotation, originalPos, timeElapsed / duration);
+                timeElapsed += Time.deltaTime;
+            }
+            else
+            {
+                transform.rotation = originalPos;
+                timeElapsed = 0;
+            }
         }
 
         if (originalPos == transform.rotation)
@@ -117,7 +137,7 @@ public class BoostLever : MonoBehaviour
         return false;
     }
 
-    private bool CheckGear()
+    public bool CheckGear()
     {
         for (int i = 0; i < gear.broken.Length; i++)
         {
@@ -138,5 +158,21 @@ public class BoostLever : MonoBehaviour
     public void MoveBack()
     {
         goBack = true;
+    }
+
+    public void GrabLimits()
+    {
+        JointLimits limits = hinge.limits;
+        limits.max = 30;
+        limits.min = -30;
+        hinge.limits = limits;
+    }
+
+    public void UnGrabLimits()
+    {
+        JointLimits limits = hinge.limits;
+        limits.max = 0;
+        limits.min = 0;
+        hinge.limits = limits;
     }
 }

@@ -6,7 +6,8 @@ public class LightsLever : MonoBehaviour
 {
     public AudioSource breakerSound;
     Quaternion originalPos;   //Refrence to the Quaternion varible to store the Object original rotation
-    public float speed = 1f;  //Public float to ste the speed at which the object Moves
+    public float timeElapsed;
+    public float duration = 1f;
 
     public GameObject lights;  //Reference to the LightsOut script 
 
@@ -25,7 +26,16 @@ public class LightsLever : MonoBehaviour
         if (goBack == true)
         {
             //.. move the object back to it's original position
-            transform.rotation = Quaternion.Slerp(transform.rotation, originalPos, Time.time * speed);
+            if (timeElapsed < duration)
+            {
+                transform.rotation = Quaternion.Slerp(transform.rotation, originalPos, timeElapsed / duration);
+                timeElapsed += Time.deltaTime;
+            }
+            else
+            {
+                transform.rotation = originalPos;
+                timeElapsed = 0;
+            }
         }
 
         //If the Objects Position is equal to the Original position...

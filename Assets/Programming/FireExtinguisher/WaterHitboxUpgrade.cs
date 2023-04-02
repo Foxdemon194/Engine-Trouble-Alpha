@@ -9,6 +9,7 @@ public class WaterHitboxUpgrade : MonoBehaviour
     float fireEmmision = 105f;    //float to set the number of emmsisons from the ParticleSystem
     ParticleSystem ps;            //reference to the ParticleSystem varibale
 
+    public GameObject tutorialDialogue;
     //public EngineManager manager;
 
     void Start()
@@ -19,6 +20,7 @@ public class WaterHitboxUpgrade : MonoBehaviour
     //Funtion that runs ones per frame
     void Update()
     {
+        tutorialDialogue = GameObject.Find("TutorialDialogueBasic");
         //manager.FirePresent();
         //Constantly get the ParticleSystem component
         ParticleSystem ps = GetComponentInChildren<ParticleSystem>();
@@ -30,6 +32,10 @@ public class WaterHitboxUpgrade : MonoBehaviour
         //If varibale time is equal to 3..
         if (time == 3)
         {
+            if (tutorialDialogue.GetComponent<BasicTutorialDialogue>().dialogueNumber <= 28 && tutorialDialogue.GetComponent<BasicTutorialDialogue>().dialogueNumber > 27)
+            {
+                tutorialDialogue.GetComponent<BasicTutorialDialogue>().Continue();
+            }
             Destroy(gameObject); //Destroy this GameObject
             //manager.Sound();
         }

@@ -13,7 +13,8 @@ public class CoalDoor : MonoBehaviour
 
     Quaternion currentPos;
     Quaternion originalPos;                    //Refrence to the Quaternion varible to store the Object original rotation
-    public float speed = 0.01f;                //Public float to ste the speed at which the object Moves
+    public float timeElapsed;
+    public float duration = 1f;
 
     public bool goBack = false;                //Bool variable to know when go back to the original position
 
@@ -43,7 +44,16 @@ public class CoalDoor : MonoBehaviour
         //If bool goBack is true...
         if (goBack == true)
         {
-            Move();  //... call Move() funtion
+            if (timeElapsed < duration)
+            {
+                transform.rotation = Quaternion.Slerp(transform.rotation, originalPos, timeElapsed / duration);
+                timeElapsed += Time.deltaTime;
+            }
+            else
+            {
+                transform.rotation = originalPos;
+                timeElapsed = 0;
+            }
         }
 
         //If the Objects Position is equal to the Original position...
@@ -86,17 +96,21 @@ public class CoalDoor : MonoBehaviour
             //If timetoStop is less or equal to 0...
             if (timetoStop <= 0)
             {
-                goBack = true; //... close the door and keep it close
-                handle.enabled = false;  //Desable the XRGrabInteractable script
-                rust.SetActive(true);    //Set RustedDoor GameObject to true
-                stuck = true;            //Set the bool stuck to true
-                if (check == true)//Make sure it does the following code onlt once
+                Move(); //... close the door and keep it close
+                
+                if (originalPos == transform.rotation)  //continues after door is closed
                 {
-                    check = false;//Make sure it does the following code onlt once
-                    doorCollider1.enabled = true;  //Enable the CoalDoorStckHelper script
-                    doorCollider1.oiled = false;   //Set the oiled bool varible in CoalDoorStckHelper script to false
-                    doorCollider2.enabled = true;  //Enable the CoalDoorStckHelper script
-                    doorCollider2.oiled = false;   //Set the oiled bool varible in CoalDoorStckHelper script to false
+                    handle.enabled = false;  //Desable the XRGrabInteractable script
+                    rust.SetActive(true);    //Set RustedDoor GameObject to true
+                    stuck = true;            //Set the bool stuck to true
+                    if (check == true)//Make sure it does the following code onlt once
+                    {
+                        check = false;//Make sure it does the following code onlt once
+                        doorCollider1.enabled = true;  //Enable the CoalDoorStckHelper script
+                        doorCollider1.oiled = false;   //Set the oiled bool varible in CoalDoorStckHelper script to false
+                        doorCollider2.enabled = true;  //Enable the CoalDoorStckHelper script
+                        doorCollider2.oiled = false;   //Set the oiled bool varible in CoalDoorStckHelper script to false
+                    }
                 }
             }
 
@@ -131,17 +145,7 @@ public class CoalDoor : MonoBehaviour
     //Move the object back to it's original position
     void Move()
     {
-        //If goBack is true...
-        if(goBack == true)
-        {
-            //.. move the object back to it's original position
-            transform.rotation = Quaternion.Slerp(transform.rotation, originalPos, Time.time * speed);
-        }
-        //If goBack is false...
-        else if (goBack == false)
-        {
-            //Do nothing
-        }
+        goBack = true;
     }
 
     //Stop the Object from moving back

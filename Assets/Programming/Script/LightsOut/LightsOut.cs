@@ -8,6 +8,7 @@ public class LightsOut : MonoBehaviour
     public Light[] lights;                //Reference to the Light arrey 
     public float[] intensity;     //Public Float variable to set the low intensity of the lights
     public float[] normalIntensity; //Public Float variable to set the normal intensity of the lights
+    public GameObject[] bulbs;
 
     private int time = 0;                 //Int variable to countdown time
     public int[] timeBreak;               //Public Int variable to store the break time frames
@@ -68,6 +69,7 @@ public class LightsOut : MonoBehaviour
                 for (int i = 0; i < redlights.Length; i++)
                 {
                     redlights[i].GetComponent<Light>().intensity = intensity[i];
+                    bulbs[i].SetActive(true);
                 }
 
                 goTimer = false;
@@ -115,6 +117,7 @@ public class LightsOut : MonoBehaviour
         for (int i = 0; i < lights.Length; i++)
         {
             lights[i].GetComponent<Light>().intensity = normalIntensity[i];
+            lights[i].GetComponent<FlickeringLight>().enabled = true;
         }
         //Restet time and randomized time to break
         time = 0;
@@ -124,7 +127,7 @@ public class LightsOut : MonoBehaviour
         for (int i = 0; i < redlights.Length; i++)
         {
             redlights[i].GetComponent<Light>().intensity = 0;
-            lights[i].GetComponent<FlickeringLight>().enabled = true;
+            bulbs[i].SetActive(false);
         }
     }
 }

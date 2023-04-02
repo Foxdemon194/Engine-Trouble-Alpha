@@ -65,8 +65,8 @@ public class EngineManager : MonoBehaviour
         ///Coal Amount Control
         if (coalLevel > 96)
         {
-            var fire = Instantiate(Fire, firePos, transform.rotation * Quaternion.Euler(-90f, 0f, 0f)); //Create Fire
-            fire.transform.parent = gameObject.transform;
+            SpawnFire();
+            FirePresent();
             coalLevel = 95;
         }
         if (coalLevel >= 75)
@@ -154,5 +154,11 @@ public class EngineManager : MonoBehaviour
         fireSound.pitch = 3f;
         fireSound.maxDistance = 10f;
         fireSound.minDistance = 7f;
+    }
+
+    public void SpawnFire()
+    {
+        var fire = Instantiate(Fire, firePos, transform.rotation * Quaternion.Euler(-90f, 0f, 0f)); //Create Fire
+        fire.transform.parent = gameObject.transform;
     }
 }
