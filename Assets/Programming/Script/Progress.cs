@@ -80,6 +80,7 @@ public class Progress : MonoBehaviour
             }
         }
 
+        distance.text = (progress.maxValue + "km");
         distanceTravelled.text = ("Distance Travelled: " + Mathf.Round(progress.value * 100) / 100 + "km");
         //timeRemaining.text = ("Time Remaining: " + countloseTime);
 
@@ -134,7 +135,7 @@ public class Progress : MonoBehaviour
         }
 
         //win screen
-        if (progress.value == 100)
+        if (progress.value == progress.maxValue)
         {
             //headUI.SetActive(true);
             //winText.SetActive(true);

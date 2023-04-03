@@ -33,6 +33,7 @@ public class BoostLever : MonoBehaviour
     void Start()
     {
         originalPos = transform.rotation;
+        UnGrabLimits();
     }
 
     // Update is called once per frame

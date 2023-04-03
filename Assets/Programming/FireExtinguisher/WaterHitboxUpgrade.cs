@@ -6,7 +6,7 @@ public class WaterHitboxUpgrade : MonoBehaviour
 {
     int timeFire = 3;             //Intensity of the fire
     int time = 0;                 //Int varibale to hold the number of times it need to bo water to destroy
-    float fireEmmision = 105f;    //float to set the number of emmsisons from the ParticleSystem
+    public float fireEmmision = 105f;    //float to set the number of emmsisons from the ParticleSystem
     ParticleSystem ps;            //reference to the ParticleSystem varibale
 
     public GameObject tutorialDialogue;
@@ -32,10 +32,6 @@ public class WaterHitboxUpgrade : MonoBehaviour
         //If varibale time is equal to 3..
         if (time == 3)
         {
-            if (tutorialDialogue.GetComponent<BasicTutorialDialogue>().dialogueNumber <= 28 && tutorialDialogue.GetComponent<BasicTutorialDialogue>().dialogueNumber > 27)
-            {
-                tutorialDialogue.GetComponent<BasicTutorialDialogue>().Continue();
-            }
             Destroy(gameObject); //Destroy this GameObject
             //manager.Sound();
         }
@@ -50,6 +46,10 @@ public class WaterHitboxUpgrade : MonoBehaviour
             StartCoroutine("Time");
             if (time == timeFire)
             {
+                if (tutorialDialogue.GetComponent<BasicTutorialDialogue>().dialogueNumber <= 28 && tutorialDialogue.GetComponent<BasicTutorialDialogue>().dialogueNumber > 27)
+                {
+                    tutorialDialogue.GetComponent<BasicTutorialDialogue>().Continue();
+                }
                 Destroy(gameObject);
                 //manager.Sound();
                 StopCoroutine("Time");
