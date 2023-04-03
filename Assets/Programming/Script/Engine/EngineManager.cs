@@ -25,7 +25,7 @@ public class EngineManager : MonoBehaviour
     public GameObject waterRedLight;*/
 
     public GameObject Fire;                  //Reference to the Fire GameObject
-    public Vector3 firePos;                  //Vector3 variable to set the position of the fire
+    public Transform firePos;                  //Vector3 variable to set the position of the fire
 
     void Start()
     {
@@ -158,7 +158,7 @@ public class EngineManager : MonoBehaviour
 
     public void SpawnFire()
     {
-        var fire = Instantiate(Fire, firePos, transform.rotation * Quaternion.Euler(-90f, 0f, 0f)); //Create Fire
+        var fire = Instantiate(Fire, firePos.position, firePos.rotation); //Create Fire
         fire.transform.parent = gameObject.transform;
     }
 }

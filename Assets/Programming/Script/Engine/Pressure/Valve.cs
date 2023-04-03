@@ -37,7 +37,8 @@ public class Valve : MonoBehaviour
     {
         //Constantly get the rotation on the Z axis
         var z = transform.localEulerAngles.y;
-        
+        z = Mathf.Round(z * 100) / 100;
+
         //If the z rotation is between the Min and Max values ...
         if (z > minValue && z < maxvalue)
         {
