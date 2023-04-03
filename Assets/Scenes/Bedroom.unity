@@ -4247,7 +4247,7 @@ GameObject:
   - component: {fileID: 793718290}
   - component: {fileID: 793718289}
   - component: {fileID: 793718288}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Button 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5051,7 +5051,7 @@ GameObject:
   - component: {fileID: 887876026}
   - component: {fileID: 887876028}
   - component: {fileID: 887876027}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text (Legacy)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6195,7 +6195,8 @@ MonoBehaviour:
   sound: {fileID: 0}
   openDoor: {fileID: 8300000, guid: d9d5263b0101dcd46bd1b2ced4d35504, type: 3}
   closeDoor: {fileID: 8300000, guid: 8f5ccda8cd7aa4d4b974119611f32b1d, type: 3}
-  speed: 0.01
+  timeElapsed: 0
+  duration: 1
   goBack: 0
   activateRust: 0
   timetoStop: 0
@@ -8159,7 +8160,8 @@ MonoBehaviour:
   sound: {fileID: 0}
   openDoor: {fileID: 8300000, guid: d9d5263b0101dcd46bd1b2ced4d35504, type: 3}
   closeDoor: {fileID: 8300000, guid: 8f5ccda8cd7aa4d4b974119611f32b1d, type: 3}
-  speed: 0.01
+  timeElapsed: 0
+  duration: 1
   goBack: 0
   activateRust: 0
   timetoStop: 0
@@ -11209,9 +11211,29 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1054457563586872774, guid: a338b0d446f0866469fa121960762266, type: 3}
+      propertyPath: m_InvalidColorGradient.key0.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1054457563586872774, guid: a338b0d446f0866469fa121960762266, type: 3}
+      propertyPath: m_InvalidColorGradient.key1.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155370401305489977, guid: a338b0d446f0866469fa121960762266, type: 3}
+      propertyPath: m_MaxRaycastDistance
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4756824501173291836, guid: a338b0d446f0866469fa121960762266, type: 3}
       propertyPath: m_Name
       value: XR Origin(Part1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5179050777595211371, guid: a338b0d446f0866469fa121960762266, type: 3}
+      propertyPath: m_InvalidColorGradient.key0.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5179050777595211371, guid: a338b0d446f0866469fa121960762266, type: 3}
+      propertyPath: m_InvalidColorGradient.key1.a
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7514654824621794402, guid: a338b0d446f0866469fa121960762266, type: 3}
       propertyPath: m_RootOrder
@@ -11256,6 +11278,14 @@ PrefabInstance:
     - target: {fileID: 7514654824621794402, guid: a338b0d446f0866469fa121960762266, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7654296484454388778, guid: a338b0d446f0866469fa121960762266, type: 3}
+      propertyPath: m_UseForceGrab
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7654296484454388778, guid: a338b0d446f0866469fa121960762266, type: 3}
+      propertyPath: m_MaxRaycastDistance
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
