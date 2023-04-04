@@ -52,7 +52,7 @@ public class Valve : MonoBehaviour
             {
                 tutorialDialogue.GetComponent<BasicTutorialDialogue>().Continue();
             }
-            if (tutorialDialogue.GetComponent<BasicTutorialDialogue>().dialogueNumber <= 28 && tutorialDialogue.GetComponent<BasicTutorialDialogue>().dialogueNumber > 27)
+            if (tutorialDialogue.GetComponent<BasicTutorialDialogue>().dialogueNumber <= 27 && tutorialDialogue.GetComponent<BasicTutorialDialogue>().dialogueNumber > 26)
             {
                 tutorialDialogue.GetComponent<BasicTutorialDialogue>().Continue();
             }

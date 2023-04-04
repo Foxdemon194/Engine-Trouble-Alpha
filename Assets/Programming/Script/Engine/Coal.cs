@@ -25,14 +25,13 @@ public class Coal : MonoBehaviour
         //If the object in collision has the "Coal" tag..
         if (other.gameObject.tag == "Coal")
         {
-            Destroy(other.gameObject);  //Destroy the object on collision
-            fuelAmount = fuelAmount + fuelIncrease;   //Increse the Coal Level in EngineManger by the set variable
-            GetComponentInParent<EngineManager>().coalLevel = fuelAmount;
-
-            if (tutorialDialogue.GetComponent<BasicTutorialDialogue>().dialogueNumber <= 14 && tutorialDialogue.GetComponent<BasicTutorialDialogue>().dialogueNumber > 12)
+            if (tutorialDialogue.GetComponent<BasicTutorialDialogue>().dialogueNumber <= 17 && tutorialDialogue.GetComponent<BasicTutorialDialogue>().dialogueNumber > 16)
             {
                 tutorialDialogue.GetComponent<BasicTutorialDialogue>().Continue();
             }
+            Destroy(other.gameObject);  //Destroy the object on collision
+            fuelAmount = fuelAmount + fuelIncrease;   //Increse the Coal Level in EngineManger by the set variable
+            GetComponentInParent<EngineManager>().coalLevel = fuelAmount;
         }
     }
 }

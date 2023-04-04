@@ -45,7 +45,7 @@ public class BoostLever : MonoBehaviour
         {
             if (z >= 15)
             {
-                if (tutorialDialogue.GetComponent<BasicTutorialDialogue>().dialogueNumber <= 32 && tutorialDialogue.GetComponent<BasicTutorialDialogue>().dialogueNumber > 31)
+                if (tutorialDialogue.GetComponent<BasicTutorialDialogue>().dialogueNumber <= 31 && tutorialDialogue.GetComponent<BasicTutorialDialogue>().dialogueNumber > 30)
                 {
                     tutorialDialogue.GetComponent<BasicTutorialDialogue>().Continue();
                 }

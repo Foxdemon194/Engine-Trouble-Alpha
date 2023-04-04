@@ -6,7 +6,7 @@ public class WaterValve : MonoBehaviour
 {
     public AudioSource fillSound;
     Quaternion originalPos;             //Refrence to the Quaternion varible to store the Object original rotation
-    public float speed = 1f;            //Public float to ste the speed at which the object Moves
+    //public float speed = 1f;            //Public float to ste the speed at which the object Moves
 
     public ParticleSystem water;        //Public Reference to the water PartycleSystem
     public ParticleSystem waterWhite;   //Public Reference to the water PartycleSystem
@@ -21,6 +21,8 @@ public class WaterValve : MonoBehaviour
     private bool fill = false;          //Bool to know when the Bucket is full
     private bool startTimeToFill = false; //Bool to start the timer to fill the bucket
     float time = 0;                       //Count the time fill
+    public float timeElapsed;
+    public float duration = 1f;
 
     // Start is called before the first frame update
     void Start()
@@ -101,6 +103,10 @@ public class WaterValve : MonoBehaviour
     //Move the object back to it's original position
     public void MoveBack()
     {
-        transform.rotation = Quaternion.Slerp(transform.rotation, originalPos, Time.time * speed);
+        if (timeElapsed < duration)
+        {
+            transform.rotation = Quaternion.Slerp(transform.rotation, originalPos, timeElapsed / (duration * 2));
+            timeElapsed += Time.deltaTime;
+        }
     }
 }

@@ -13,7 +13,22 @@ public class TriggerDialogue : MonoBehaviour
             if (tutorialDialogue.GetComponent<BasicTutorialDialogue>().dialogueNumber <= 2 && tutorialDialogue.GetComponent<BasicTutorialDialogue>().dialogueNumber > 1)
             {
                 tutorialDialogue.Continue();
-                tutorialDialogue.NextBox();
+            }
+            if (tutorialDialogue.GetComponent<BasicTutorialDialogue>().dialogueNumber <= 11 && tutorialDialogue.GetComponent<BasicTutorialDialogue>().dialogueNumber > 10)
+            {
+                tutorialDialogue.Continue();
+            }
+            if (tutorialDialogue.GetComponent<BasicTutorialDialogue>().dialogueNumber <= 13 && tutorialDialogue.GetComponent<BasicTutorialDialogue>().dialogueNumber > 12)
+            {
+                tutorialDialogue.Continue();
+            }
+            if (tutorialDialogue.GetComponent<BasicTutorialDialogue>().dialogueNumber <= 20 && tutorialDialogue.GetComponent<BasicTutorialDialogue>().dialogueNumber > 19)
+            {
+                tutorialDialogue.Continue();
+            }
+            if (tutorialDialogue.GetComponent<BasicTutorialDialogue>().dialogueNumber <= 25 && tutorialDialogue.GetComponent<BasicTutorialDialogue>().dialogueNumber > 24)
+            {
+                tutorialDialogue.Continue();
             }
         }
     }

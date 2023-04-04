@@ -29,7 +29,7 @@ public class Water : MonoBehaviour
             fuelAmount += fuelIncrease;
             GetComponentInParent<EngineManager>().waterLevel = fuelAmount;
 
-            if (tutorialDialogue.GetComponent<BasicTutorialDialogue>().dialogueNumber <= 23 && tutorialDialogue.GetComponent<BasicTutorialDialogue>().dialogueNumber > 22)
+            if (tutorialDialogue.GetComponent<BasicTutorialDialogue>().dialogueNumber <= 22 && tutorialDialogue.GetComponent<BasicTutorialDialogue>().dialogueNumber > 21)
             {
                 tutorialDialogue.GetComponent<BasicTutorialDialogue>().Continue();
             }
