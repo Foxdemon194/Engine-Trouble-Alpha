@@ -48,11 +48,11 @@ public class Valve : MonoBehaviour
         }
         else //if not ...
         {
-            if (tutorialDialogue.GetComponent<BasicTutorialDialogue>().dialogueNumber <= 7 && tutorialDialogue.GetComponent<BasicTutorialDialogue>().dialogueNumber > 6)
+            if (tutorialDialogue.GetComponent<BasicTutorialDialogue>().dialogueNumber <= 8 && tutorialDialogue.GetComponent<BasicTutorialDialogue>().dialogueNumber > 7)
             {
                 tutorialDialogue.GetComponent<BasicTutorialDialogue>().Continue();
             }
-            if (tutorialDialogue.GetComponent<BasicTutorialDialogue>().dialogueNumber <= 22 && tutorialDialogue.GetComponent<BasicTutorialDialogue>().dialogueNumber > 21)
+            if (tutorialDialogue.GetComponent<BasicTutorialDialogue>().dialogueNumber <= 28 && tutorialDialogue.GetComponent<BasicTutorialDialogue>().dialogueNumber > 27)
             {
                 tutorialDialogue.GetComponent<BasicTutorialDialogue>().Continue();
             }

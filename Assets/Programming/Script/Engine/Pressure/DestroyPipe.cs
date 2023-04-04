@@ -26,7 +26,7 @@ public class DestroyPipe : MonoBehaviour
             //Set the brokenPipeActive bool varibale in FixedPipeHandler script as false
             holder.GetComponent<FixedPipeHandler>().brokenPipeActive = false;
 
-            if (tutorialDialogue.GetComponent<BasicTutorialDialogue>().dialogueNumber <= 4 && tutorialDialogue.GetComponent<BasicTutorialDialogue>().dialogueNumber > 3)
+            if (tutorialDialogue.GetComponent<BasicTutorialDialogue>().dialogueNumber <= 5 && tutorialDialogue.GetComponent<BasicTutorialDialogue>().dialogueNumber > 4)
             {
                 tutorialDialogue.GetComponent<BasicTutorialDialogue>().Continue();
             }

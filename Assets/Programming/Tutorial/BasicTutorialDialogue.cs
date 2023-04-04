@@ -49,6 +49,7 @@ public class BasicTutorialDialogue : MonoBehaviour
 
     public GameObject[] colliderGroups;
     public GameObject[] triggerGroups;
+    public int currentCol;
 
     public float Timer = 0.0f;
 
@@ -91,6 +92,7 @@ public class BasicTutorialDialogue : MonoBehaviour
                 if (continousPlay == true)
                 {
                     Diologue();
+                    currentCol++;
                 }
             }
         }
@@ -115,7 +117,7 @@ public class BasicTutorialDialogue : MonoBehaviour
             continousPlay = false;
             //welcome to first day
         }
-        if (dialogueNumber == 2)
+        if (dialogueNumber == 3)
         {
             interval = 12;
             speaker1.clip = clip2;
@@ -126,7 +128,7 @@ public class BasicTutorialDialogue : MonoBehaviour
             speaker3.Play();
             //this is storage room
         }
-        if (dialogueNumber == 3)
+        if (dialogueNumber == 4)
         {
             NextBox();
             interval = 18;
@@ -140,9 +142,9 @@ public class BasicTutorialDialogue : MonoBehaviour
             boiler1.GetComponentInChildren<Pressure>().sPressure = 100;
             //check when barrel breaks or pipes
         }
-        if (dialogueNumber == 5)
+        if (dialogueNumber == 6)
         {
-            interval = 5;
+            interval = 5; 
             speaker1.clip = clip4;
             speaker1.Play();
             speaker2.clip = clip4;
@@ -151,10 +153,10 @@ public class BasicTutorialDialogue : MonoBehaviour
             speaker3.Play();
             //good job
         }
-        if (dialogueNumber == 6)
+        if (dialogueNumber == 7)
         {
             NextBox();
-            interval = 21;
+            interval = 21; 
             speaker1.clip = clip5;
             speaker1.Play();
             speaker2.clip = clip5;
@@ -164,9 +166,10 @@ public class BasicTutorialDialogue : MonoBehaviour
             continousPlay = false;
             //wrench and valves
         }
-        if (dialogueNumber == 8)
+        if (dialogueNumber == 9)
         { 
             interval = 3;
+            currentCol++;
             speaker1.clip = clip6;
             speaker1.Play();
             speaker2.clip = clip6;
@@ -175,34 +178,36 @@ public class BasicTutorialDialogue : MonoBehaviour
             speaker3.Play();
             //knew you could do it
         }
-        if (dialogueNumber == 9)
+        if (dialogueNumber == 10)
         {
             NextBox();
-            interval = 6;
+            interval = 6; 
             speaker1.clip = clip7;
             speaker1.Play();
             speaker2.clip = clip7;
             speaker2.Play();
             speaker3.clip = clip7;
             speaker3.Play();
+            continousPlay = false;
             //mentions oil
         }
-        if (dialogueNumber == 10)
+        if (dialogueNumber == 12)
         {
             NextBox();
-            interval = 11;
+            interval = 11; 
             speaker1.clip = clip8;
             speaker1.Play();
             speaker2.clip = clip8;
             speaker2.Play();
             speaker3.clip = clip8;
             speaker3.Play();
+            continousPlay = false;
             //this is the boiler room
         }
-        if (dialogueNumber == 11)
+        if (dialogueNumber == 14)
         {
             NextBox();
-            interval = 15;
+            interval = 15; 
             speaker1.clip = status1;
             speaker1.Play();
             speaker2.clip = status1;
@@ -211,7 +216,7 @@ public class BasicTutorialDialogue : MonoBehaviour
             speaker3.Play();
             //status board stuff
         }
-        if (dialogueNumber == 12)
+        if (dialogueNumber == 15)
         {
             NextBox();
             interval = 11;
@@ -223,7 +228,7 @@ public class BasicTutorialDialogue : MonoBehaviour
             speaker3.Play();
             //status board stuff, but about the color i guess
         }
-        if (dialogueNumber == 13)
+        if (dialogueNumber == 17)
         {
             NextBox();
             interval = 23;
@@ -236,7 +241,7 @@ public class BasicTutorialDialogue : MonoBehaviour
             continousPlay = false;
             //adding coal to boiler
         }
-        if (dialogueNumber == 15)
+        if (dialogueNumber == 18)
         {
             interval = 14;
             speaker1.clip = clip10;
@@ -247,7 +252,7 @@ public class BasicTutorialDialogue : MonoBehaviour
             speaker3.Play();
             //leaving the shovel in the room
         }
-        if (dialogueNumber == 16)
+        if (dialogueNumber == 20)
         {
             NextBox();
             interval = 11;
@@ -257,9 +262,10 @@ public class BasicTutorialDialogue : MonoBehaviour
             speaker2.Play();
             speaker3.clip = clip11;
             speaker3.Play();
+            continousPlay = false;
             //go upstairs for water input
         }
-        if (dialogueNumber == 17)
+        if (dialogueNumber == 22)
         {
             NextBox();
             interval = 13;
@@ -272,7 +278,7 @@ public class BasicTutorialDialogue : MonoBehaviour
             continousPlay = false;
             //Water input
         }
-        if (dialogueNumber == 19)
+        if (dialogueNumber == 24)
         {
             interval = 15;
             speaker1.clip = clip13;
@@ -283,7 +289,7 @@ public class BasicTutorialDialogue : MonoBehaviour
             speaker3.Play();
             //cooling engine with water and heating with coal
         }
-        if (dialogueNumber == 20)
+        if (dialogueNumber == 25)
         {
             NextBox();
             interval = 9;
@@ -293,9 +299,10 @@ public class BasicTutorialDialogue : MonoBehaviour
             speaker2.Play();
             speaker3.clip = clip14;
             speaker3.Play();
+            continousPlay = false;
             //go downstairs with wrench
         }
-        if (dialogueNumber == 21)
+        if (dialogueNumber == 27)
         {
             NextBox();
             interval = 13;
@@ -308,9 +315,9 @@ public class BasicTutorialDialogue : MonoBehaviour
             continousPlay = false;
             //Wrench and valves again
         }
-        if (dialogueNumber == 23)
+        if (dialogueNumber == 29)
         {
-            interval = 15;
+            interval = 15; 
             speaker1.clip = clip16;
             speaker1.Play();
             speaker2.clip = clip16;
@@ -319,7 +326,7 @@ public class BasicTutorialDialogue : MonoBehaviour
             speaker3.Play();
             //nicely done
         }
-        if (dialogueNumber == 24)
+        if (dialogueNumber == 30)
         {
             NextBox();
             interval = 15;
@@ -331,7 +338,7 @@ public class BasicTutorialDialogue : MonoBehaviour
             speaker3.Play();
             //speed and time
         }
-        if (dialogueNumber == 25)
+        if (dialogueNumber == 31)
         {
             NextBox();
             interval = 16;
@@ -344,9 +351,9 @@ public class BasicTutorialDialogue : MonoBehaviour
             continousPlay = false;
             //Boost lever
         }
-        if (dialogueNumber == 27)
+        if (dialogueNumber == 33)
         {
-            interval = 6;
+            interval = 6; 
             speaker1.clip = clip19;
             speaker1.Play();
             speaker2.clip = clip19;
@@ -356,9 +363,9 @@ public class BasicTutorialDialogue : MonoBehaviour
             continousPlay = false;
             //fire
         }
-        if (dialogueNumber == 29)
+        if (dialogueNumber == 35)
         {
-            interval = 12;
+            interval = 12; 
             speaker1.clip = clip20;
             speaker1.Play();
             speaker2.clip = clip20;
@@ -367,10 +374,10 @@ public class BasicTutorialDialogue : MonoBehaviour
             speaker3.Play();
             //job well done and explaining the lever
         }
-        if (dialogueNumber == 30)
+        if (dialogueNumber == 36)
         {
             NextBox();
-            interval = 13;
+            interval = 13; 
             speaker1.clip = clip21;
             speaker1.Play();
             speaker2.clip = clip21;
@@ -379,7 +386,7 @@ public class BasicTutorialDialogue : MonoBehaviour
             speaker3.Play();
             //fire extinguisher is limited
         }
-        if (dialogueNumber == 31)
+        if (dialogueNumber == 37)
         {
             NextBox();
             interval = 15;
@@ -411,7 +418,7 @@ public class BasicTutorialDialogue : MonoBehaviour
             triggerGroups[i].SetActive(false);
         }
 
-        colliderGroups[dialogueNumber - 1].SetActive(true);
-        triggerGroups[dialogueNumber - 1].SetActive(true);
+        colliderGroups[currentCol].SetActive(true);
+        triggerGroups[currentCol].SetActive(true);
     }
 }

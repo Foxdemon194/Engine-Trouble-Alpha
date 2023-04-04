@@ -10,7 +10,7 @@ public class TriggerDialogue : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            if (tutorialDialogue.GetComponent<BasicTutorialDialogue>().dialogueNumber < 2)
+            if (tutorialDialogue.GetComponent<BasicTutorialDialogue>().dialogueNumber <= 2 && tutorialDialogue.GetComponent<BasicTutorialDialogue>().dialogueNumber > 1)
             {
                 tutorialDialogue.Continue();
                 tutorialDialogue.NextBox();

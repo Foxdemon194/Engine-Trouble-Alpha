@@ -46,7 +46,7 @@ public class WaterHitboxUpgrade : MonoBehaviour
             StartCoroutine("Time");
             if (time == timeFire)
             {
-                if (tutorialDialogue.GetComponent<BasicTutorialDialogue>().dialogueNumber <= 28 && tutorialDialogue.GetComponent<BasicTutorialDialogue>().dialogueNumber > 27)
+                if (tutorialDialogue.GetComponent<BasicTutorialDialogue>().dialogueNumber <= 34 && tutorialDialogue.GetComponent<BasicTutorialDialogue>().dialogueNumber > 33)
                 {
                     tutorialDialogue.GetComponent<BasicTutorialDialogue>().Continue();
                 }
