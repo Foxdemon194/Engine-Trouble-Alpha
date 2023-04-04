@@ -3139,6 +3139,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1613910118421386399, guid: 45d5cb7c3bdec544a9af916425ec5d36, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8405837098398881391, guid: 45d5cb7c3bdec544a9af916425ec5d36, type: 3}
       propertyPath: m_Name
       value: Storage Toolbox
