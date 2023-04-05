@@ -39,6 +39,7 @@ public class Progress : MonoBehaviour
 
 
     public bool bostLever = false;
+    public bool tut;
 
     public TextMeshPro distance;
     public TextMeshPro distanceTravelled;
@@ -148,9 +149,17 @@ public class Progress : MonoBehaviour
 
         if (bostLever)
         {
-            int rand = Random.Range(0, engines.Length);
-            engines[rand].SpawnFire();
-            bostLever = false;
+            if (tut)
+            {
+                engines[0].SpawnFire();
+                bostLever = false;
+            }
+            else
+            {
+                int rand = Random.Range(0, engines.Length);
+                engines[rand].SpawnFire();
+                bostLever = false;
+            }
         }
     }
 
