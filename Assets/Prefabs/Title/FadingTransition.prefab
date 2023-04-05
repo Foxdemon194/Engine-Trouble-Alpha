@@ -137,6 +137,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 736289906065145523}
+  TitleScreenAmbience: {fileID: 0}
+  showButton:
+    m_UseReference: 0
+    m_Action:
+      m_Name: 
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: b11d37cd-8440-42a6-a6ab-3271386376d5
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 0}
 --- !u!1 &736289906325633188
 GameObject:
   m_ObjectHideFlags: 0
