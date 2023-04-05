@@ -25,7 +25,7 @@ public class Coal : MonoBehaviour
         //If the object in collision has the "Coal" tag..
         if (other.gameObject.tag == "Coal")
         {
-            if (tutorialDialogue.GetComponent<BasicTutorialDialogue>().dialogueNumber <= 17 && tutorialDialogue.GetComponent<BasicTutorialDialogue>().dialogueNumber > 16)
+            if (tutorialDialogue.GetComponent<BasicTutorialDialogue>().dialogueNumber <= 18 && tutorialDialogue.GetComponent<BasicTutorialDialogue>().dialogueNumber > 16)
             {
                 tutorialDialogue.GetComponent<BasicTutorialDialogue>().Continue();
             }
