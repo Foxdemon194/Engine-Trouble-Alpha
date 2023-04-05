@@ -214,6 +214,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Result screen (Test)",
+                    "type": "Button",
+                    "id": "ea41c3ac-5d38-4e82-945a-c52aea7c537b",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -588,6 +597,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "Menu",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c5565708-61fa-4852-93be-19b29eb759de",
+                    "path": "<XRInputV1::Oculus::OculusTouchControllerOpenXR>{LeftHand}/primarybutton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Result screen (Test)",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

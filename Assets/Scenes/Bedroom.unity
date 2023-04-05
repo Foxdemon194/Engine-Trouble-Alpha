@@ -263,6 +263,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: R. Barrel
       objectReference: {fileID: 0}
+    - target: {fileID: 2372729700548443542, guid: 30febe203218c54449ec5e314f0a528e, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6207183095857480859, guid: 30febe203218c54449ec5e314f0a528e, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -307,7 +311,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2372729700548443542, guid: 30febe203218c54449ec5e314f0a528e, type: 3}
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 30febe203218c54449ec5e314f0a528e, type: 3}
 --- !u!1001 &6054844
@@ -8799,7 +8804,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1372151508}
   m_LocalRotation: {x: -0.301677, y: 0.64401114, z: -0.29822183, w: 0.6366351}
-  m_LocalPosition: {x: -613.9, y: -339, z: -4175}
+  m_LocalPosition: {x: -667.9, y: -374.2, z: -2956}
   m_LocalScale: {x: -87.847565, y: -120.49864, z: -71.4319}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -11180,6 +11185,10 @@ PrefabInstance:
       propertyPath: m_MaxRaycastDistance
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 1155370401305489977, guid: a338b0d446f0866469fa121960762266, type: 3}
+      propertyPath: m_RaycastMask.m_Bits
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4756824501173291836, guid: a338b0d446f0866469fa121960762266, type: 3}
       propertyPath: m_Name
       value: XR Origin(Part1)
@@ -11243,6 +11252,10 @@ PrefabInstance:
     - target: {fileID: 7654296484454388778, guid: a338b0d446f0866469fa121960762266, type: 3}
       propertyPath: m_MaxRaycastDistance
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7654296484454388778, guid: a338b0d446f0866469fa121960762266, type: 3}
+      propertyPath: m_RaycastMask.m_Bits
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []

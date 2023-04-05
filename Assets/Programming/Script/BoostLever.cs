@@ -29,6 +29,8 @@ public class BoostLever : MonoBehaviour
 
     public GameObject tutorialDialogue;
 
+    public bool tut;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -39,33 +41,36 @@ public class BoostLever : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        var z = transform.localEulerAngles.z;
+        var z = transform.eulerAngles.z;
 
-        if(CheckCoalLevel() && CheckWaterLevel() && CheckPressureLevel() && CheckGear())
+        if (!tut)
         {
-            if (z >= 15)
+            if (CheckCoalLevel() && CheckWaterLevel() && CheckPressureLevel() && CheckGear())
             {
-                if (tutorialDialogue.GetComponent<BasicTutorialDialogue>().dialogueNumber <= 31 && tutorialDialogue.GetComponent<BasicTutorialDialogue>().dialogueNumber > 30)
+                if (z >= 15 || z <= -15)
                 {
-                    tutorialDialogue.GetComponent<BasicTutorialDialogue>().Continue();
-                }
+                    if (tutorialDialogue.GetComponent<BasicTutorialDialogue>().dialogueNumber <= 31 && tutorialDialogue.GetComponent<BasicTutorialDialogue>().dialogueNumber > 30)
+                    {
+                        tutorialDialogue.GetComponent<BasicTutorialDialogue>().Continue();
+                    }
 
-                foreach (EngineManager obj in coal)
-                {
-                    obj.coalLevel -= decreaseSpeedCoal;
-                }
-                foreach (EngineManager obj in water)
-                {
-                    obj.waterLevel -= decreaseSpeedWater;
-                }
+                    foreach (EngineManager obj in coal)
+                    {
+                        obj.coalLevel -= decreaseSpeedCoal;
+                    }
+                    foreach (EngineManager obj in water)
+                    {
+                        obj.waterLevel -= decreaseSpeedWater;
+                    }
 
-                foreach (Pressure obj in pressure)
-                {
-                    obj.sPressure += increaseSpeedSteam;
-                }
+                    foreach (Pressure obj in pressure)
+                    {
+                        obj.sPressure += increaseSpeedSteam;
+                    }
 
-                progress.speed = increaseSpeedProgress;
-                progress.bostLever = true;
+                    progress.speed = increaseSpeedProgress;
+                    progress.bostLever = true;
+                }
             }
         }
    
