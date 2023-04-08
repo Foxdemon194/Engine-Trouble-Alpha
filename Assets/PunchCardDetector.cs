@@ -12,7 +12,15 @@ public class PunchCardDetector : MonoBehaviour
         }
         else if (other.gameObject.name == "punchCard02(Clone)")
         {
-            SceneManager.LoadScene("Level2");
+            SceneManager.LoadScene("Level1 Test");
+        }
+        else if (other.gameObject.name == "punchCard03(Clone)")
+        {
+            SceneManager.LoadScene("Level3");
+        }
+        else if (other.gameObject.name == "punchCard04(Clone)")
+        {
+            SceneManager.LoadScene("Credits");
         }
     }
 }
