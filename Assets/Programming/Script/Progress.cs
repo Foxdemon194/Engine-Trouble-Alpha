@@ -28,8 +28,8 @@ public class Progress : MonoBehaviour
     public float lowSpeed = 0.004f;
     public float higSpeed = 0.01f;
 
-    public float loseTime = 120;         //how long the player can let the ship be stationary before they 'run out of time' and lose
-    public float countloseTime;
+
+    public float timer = 600; //ten minutes
     public bool losing;
 
     //Pause 
@@ -43,17 +43,19 @@ public class Progress : MonoBehaviour
 
     public TextMeshPro distance;
     public TextMeshPro distanceTravelled;
+    public TextMeshPro distanceRemaining;
+    public TextMeshPro timeRemaining;
 
     public Light[] checkLight;
+    public Light[] gearLight;
     public GameObject[] bulbs;
+    public GameObject[] gearsBulb;
     public Material red;
     public Material green;
-    //public TextMeshPro timeRemaining;
 
     // Start is called before the first frame update
     void Start()
     {
-        countloseTime = loseTime;
         //headUI.SetActive(false);
         //loseText.SetActive(false);
         //winText.SetActive(false);
@@ -81,9 +83,28 @@ public class Progress : MonoBehaviour
             }
         }
 
-        distance.text = (progress.maxValue + "km");
-        distanceTravelled.text = ("Distance Travelled: " + Mathf.Round(progress.value * 100) / 100 + "km");
-        //timeRemaining.text = ("Time Remaining: " + countloseTime);
+        for (int i = 0; i < gearController.broken.Length; i++)
+        {
+            if (gearController.broken[i])
+            {
+                gearLight[i].intensity = 1;
+                gearLight[i].color = Color.red;
+                gearsBulb[i].GetComponent<Renderer>().material = red;
+            }
+            else
+            {
+                gearLight[i].intensity = 1;
+                gearLight[i].color = Color.red;
+                gearsBulb[i].GetComponent<Renderer>().material = green;
+            }
+        }
+
+        timer -= Time.deltaTime;
+
+        distance.text = (progress.maxValue + "KM");
+        distanceTravelled.text = (Mathf.Round(progress.value * 100) / 100 + "KM");
+        distanceRemaining.text = (((Mathf.Round(progress.maxValue * 100) / 100) - Mathf.Round(progress.value * 100) / 100) + "KM");
+        timeRemaining.text = (Mathf.Round(timer * 100) / 100) + "";
 
         //Calculate the averagePressure of the Pressure Scripts
         total = 0;
@@ -100,7 +121,6 @@ public class Progress : MonoBehaviour
         if (losing)
         {
             speed = 0;
-            countloseTime -= Time.deltaTime;
         }
         
         if (averagePressure <= 10 || !CheckGear())
@@ -110,21 +130,18 @@ public class Progress : MonoBehaviour
         else if (averagePressure > 10 && averagePressure <= 25)
         {
             speed = lowSpeed;
-            countloseTime = loseTime;
         }
         else if (averagePressure > 25 && averagePressure < 85)
         {
             speed = normalSpeed;
-            countloseTime = loseTime;
         }
         else if (averagePressure >= 85)
         {
             speed = higSpeed;
-            countloseTime = loseTime;
         }
 
         //lose screen
-        if (countloseTime <= 0) 
+        if (timer <= 0 && progress.value != progress.maxValue) 
         {
             //headUI.SetActive(true);
             //loseText.SetActive(true);
@@ -133,6 +150,9 @@ public class Progress : MonoBehaviour
             //leftControllerVisual.lineLength = 3f;
             //rightController.maxRaycastDistance = 3f;
             //rightControllerVisual.lineLength = 3f;
+
+            //result screen here (win)
+
         }
 
         //win screen
@@ -145,6 +165,9 @@ public class Progress : MonoBehaviour
             //leftControllerVisual.lineLength = 3f;
             //rightController.maxRaycastDistance = 3f;
             //rightControllerVisual.lineLength = 3f;
+
+            //result screen here (lose)
+
         }
 
         if (bostLever)

@@ -18,7 +18,8 @@ public class BoostLever : MonoBehaviour
     public float decreaseSpeedCoal = 75;
     public float decreaseSpeedWater = 75;
     public float increaseSpeedSteam = 50;
-    public float increaseSpeedProgress = 0.05f;
+    //public float increaseSpeedProgress = 0.05f;
+    public float progressIncrease = 50;
 
     public bool goBack;
     Quaternion originalPos;
@@ -68,7 +69,8 @@ public class BoostLever : MonoBehaviour
                         obj.sPressure += increaseSpeedSteam;
                     }
 
-                    progress.speed = increaseSpeedProgress;
+                    //rogress.speed = increaseSpeedProgress;
+                    progress.progress.value += progressIncrease;
                     progress.bostLever = true;
                 }
             }
