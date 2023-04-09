@@ -8,6 +8,7 @@ using UnityEngine.SceneManagement;
 /// script written by Andres Lopez
 /// adjusted / implemented by Ralfo (Tony) Manzur
 /// with help from Joshua Rosa and Pedro Terra
+/// ..and Alejandro Guzman too >.>
 /// </summary>
 
 public class BasicTutorialDialogue : MonoBehaviour

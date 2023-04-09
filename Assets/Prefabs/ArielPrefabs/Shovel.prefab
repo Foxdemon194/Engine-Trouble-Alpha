@@ -49,6 +49,8 @@ Transform:
   - {fileID: 7973692606717192195}
   - {fileID: 7973692606852132895}
   - {fileID: 1337770070828834991}
+  - {fileID: 7973692606349447209}
+  - {fileID: 7973692605285279523}
   m_Father: {fileID: 7973692607031137340}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: -360, z: 0}
@@ -302,12 +304,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7973692605285279524}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.0209, y: -0.436, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: -1}
+  m_LocalPosition: {x: 0.0021011513, y: -0.43300012, z: 0.015999485}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 7973692607031137340}
+  m_Father: {fileID: 7331901342818824513}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &7973692605285279527
@@ -745,12 +747,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7973692606349447202}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.0212, y: 0.1116, z: -0.002}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: -1}
+  m_LocalPosition: {x: 0.0017999336, y: 0.114600025, z: 0.013999887}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 7973692607031137340}
+  m_Father: {fileID: 7331901342818824513}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &7973692606349447213
@@ -1222,6 +1224,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sound: {fileID: 7973692606852132893}
   coal: {fileID: 4357761476920377511, guid: 2e51fde156abbc645a3627118840bba2, type: 3}
+  y: 0
+  z: 0
 --- !u!82 &7973692606852132893
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1391,8 +1395,6 @@ Transform:
   m_LocalScale: {x: 1.2975801, y: 1.2975804, z: 1.2975804}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 7973692606349447209}
-  - {fileID: 7973692605285279523}
   - {fileID: 7331901342818824513}
   m_Father: {fileID: 0}
   m_RootOrder: -1
