@@ -44,6 +44,11 @@ public class BoostLever : MonoBehaviour
     {
         var z = transform.eulerAngles.z;
 
+        if (tutorialDialogue.GetComponent<BasicTutorialDialogue>().dialogueNumber == 30)
+        {
+            tut = false;
+        }
+
         if (!tut)
         {
             if (CheckCoalLevel() && CheckWaterLevel() && CheckPressureLevel() && CheckGear())

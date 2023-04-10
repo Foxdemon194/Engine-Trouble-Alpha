@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 2665906372070346480}
   - component: {fileID: 2665906372070346444}
   - component: {fileID: 2665906372070346445}
+  - component: {fileID: 1971873192}
   m_Layer: 6
   m_Name: Hammer
   m_TagString: Hammer
@@ -32,7 +33,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 714022871516450043}
-  m_LocalRotation: {x: -0.104069956, y: 0.7355061, z: -0.6593351, w: -0.1160928}
+  m_LocalRotation: {x: -0.10406809, y: 0.735509, z: -0.65933233, w: -0.11609171}
   m_LocalPosition: {x: -3.744234, y: 1.1820002, z: 1.0776634}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -188,7 +189,19 @@ MonoBehaviour:
       m_Calls: []
   m_SelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1971873192}
+        m_TargetAssemblyTypeName: ArrowDestroy, Assembly-CSharp
+        m_MethodName: GetRidOfThisDumbThing
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
       m_Calls: []
@@ -375,6 +388,19 @@ MonoBehaviour:
   pipeGearBreak: {fileID: 8300000, guid: 7a4a37138addf724abd1e844be120482, type: 3}
   metalHit: {fileID: 8300000, guid: 4437099c83866364fb21f6ff4ae0b953, type: 3}
   Hammer: 1
+--- !u!114 &1971873192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 714022871516450043}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34a97aa703c65ea4aa57c12e9f78a70b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  arrow: {fileID: 0}
 --- !u!1 &5575274269998946394
 GameObject:
   m_ObjectHideFlags: 0

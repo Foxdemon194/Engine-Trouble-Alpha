@@ -16,6 +16,14 @@ public class ArrowAnim : MonoBehaviour
     public bool arrowRightValve;
     public bool arrowRightValve2;
     public bool toWaterIn;
+    public bool wrench;
+    public bool hammer;
+    public bool fireEx;
+    public bool pipe;
+    public bool barrel;
+    public bool shovel;
+    public bool lever;
+    public bool bucket;
 
     private void Start()
     {
@@ -72,6 +80,46 @@ public class ArrowAnim : MonoBehaviour
         if (arrowRightValve2)
         {
             anim.SetBool("arrow right valve 2", true);
+        }
+
+        if (bucket)
+        {
+            anim.SetBool("bucket", true);
+        }
+
+        if (wrench)
+        {
+            anim.SetBool("wrench", true);
+        }
+
+        if (lever)
+        {
+            anim.SetBool("lever", true);
+        }
+
+        if (barrel)
+        {
+            anim.SetBool("barrel", true);
+        }
+
+        if (pipe)
+        {
+            anim.SetBool("pipe", true);
+        }
+
+        if (fireEx)
+        {
+            anim.SetBool("fireEx", true);
+        }
+
+        if (hammer)
+        {
+            anim.SetBool("hammer", true);
+        }
+
+        if (shovel)
+        {
+            anim.SetBool("shovel", true);
         }
     }
 }

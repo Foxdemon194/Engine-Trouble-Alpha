@@ -59,6 +59,7 @@ public class BasicTutorialDialogue : MonoBehaviour
     public bool continousPlay;
 
     public BoostLever lever;
+    public Pressure pressure;
     //public bool cont2;
 
     // Start is called before the first frame update
@@ -320,6 +321,7 @@ public class BasicTutorialDialogue : MonoBehaviour
         }
         if (dialogueNumber == 29)
         {
+            pressure.sPressure = 50;
             interval = 15;
             speaker1.clip = clip17;
             speaker1.Play();
@@ -331,7 +333,6 @@ public class BasicTutorialDialogue : MonoBehaviour
         }
         if (dialogueNumber == 30)
         {
-            lever.tut = false;
             interval = 16;
             speaker1.clip = clip18;
             speaker1.Play();

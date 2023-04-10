@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2860464163928889068}
   - component: {fileID: 2372729700548443542}
   - component: {fileID: 1556324458540495558}
+  - component: {fileID: 7822971381831981079}
   m_Layer: 0
   m_Name: R. Barrel
   m_TagString: Untagged
@@ -183,6 +184,19 @@ CapsuleCollider:
   m_Height: 1.1
   m_Direction: 1
   m_Center: {x: 0, y: 0.5, z: -1.22}
+--- !u!65 &7822971381831981079
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1051104817040514429}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.82, y: 0.34, z: 0.79}
+  m_Center: {x: 0, y: 0.15, z: -1.19}
 --- !u!1 &3036202378121506532
 GameObject:
   m_ObjectHideFlags: 0

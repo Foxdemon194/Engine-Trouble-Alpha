@@ -11,14 +11,12 @@ public class Water : MonoBehaviour
     private float fuelIncrease;  //Float variable to the increase the Water Level in EngineManager
 
     public GameObject tutorialDialogue;
-    public Pressure pressure;
 
     //Constantly takes the values from their respective counterparts and gives them to the new variables
     void Update()
     {
         fuelAmount = GetComponentInParent<EngineManager>().waterLevel;
         fuelIncrease = GetComponentInParent<EngineManager>().waterIncrease;
-        pressure = GetComponentInParent<Pressure>();
     }
 
     //On Trigger Collision Enter...
@@ -34,7 +32,6 @@ public class Water : MonoBehaviour
             if (tutorialDialogue.GetComponent<BasicTutorialDialogue>().dialogueNumber <= 22 && tutorialDialogue.GetComponent<BasicTutorialDialogue>().dialogueNumber > 21)
             {
                 tutorialDialogue.GetComponent<BasicTutorialDialogue>().Continue();
-                pressure.sPressure = 50;
             }
         }
     }
