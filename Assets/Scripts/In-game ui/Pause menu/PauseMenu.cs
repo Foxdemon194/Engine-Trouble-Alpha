@@ -15,6 +15,11 @@ public class PauseMenu : MonoBehaviour
     public Transform head;
     public float menuDistance = 2;
 
+    //tips
+    public string[] tips;
+    public Text tipText;
+    private int _chooseTip;
+
     private void Start()
     {
         var _toggleSub = PlayerPrefs.GetInt("toggles",0) == 1; //load sub toggle setting
@@ -47,6 +52,11 @@ public class PauseMenu : MonoBehaviour
             //Cursor.visible = true;
             pauseCanvas.transform.position = head.position + new Vector3(head.forward.x, 0, head.forward.z).normalized * menuDistance;
             pauseCanvas.transform.rotation = head.transform.rotation;
+            
+
+            //tips
+            _chooseTip = Random.Range (0, tips.Length);
+            tipText.text = "Tip: " + tips[_chooseTip];
         }
 
         if (subtitleToggle.isOn)

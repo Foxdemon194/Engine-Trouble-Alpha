@@ -13,7 +13,7 @@ public class ResultScreen : MonoBehaviour
     private CanvasGroup canvGroup;
     //slider:
     public Slider progressSlider;
-    public float progress = 0;              //change. Round to a 100
+    private float progress = 0;              //change. Round to a 100
     public GameObject sliderPanel;
     private CanvasGroup _sliderPanel;
     public AudioSource sliderStartSfx;
@@ -21,7 +21,7 @@ public class ResultScreen : MonoBehaviour
     // time text:
     public Text timeText;
     public float delay = 0.1f;
-    public float timeInSeconds;           //change
+    private float timeInSeconds;           //change
     private string timeFullText;
     private AudioSource timeTxtAudio;
     //level text:
@@ -43,9 +43,16 @@ public class ResultScreen : MonoBehaviour
     public AudioSource ambienceAudio;
 
 
-    public InputActionProperty showButton;
+    //public InputActionProperty showButton;
     public Transform head;
     public float menuDistance = 2;
+
+    //timer
+    private bool _stopTimer;
+    //progress
+    Progress progressScript;
+
+
 
     private void Start()
     {
@@ -56,12 +63,16 @@ public class ResultScreen : MonoBehaviour
         levelTxtAudio = levelText.gameObject.GetComponent<AudioSource>();
         stampSfx = failedStampImage.gameObject.GetComponent<AudioSource>();
         _resultScreenAnim = resultScreen.GetComponent<Animator>();
+
+        _stopTimer = false;
     }
     private void Update()
     {
-        if (showButton.action.WasPressedThisFrame())                                 //CHANGE THE CONDITION
-        {
+        progress = (progressScript.progress.value / progressScript.progress.maxValue) * 100;
 
+        if (progressScript.losing || progressScript.wining)                                 //CHANGE THE CONDITION
+        {
+            _stopTimer = true;  //stop timer
             ambienceAudio.volume /= 2;
             _resultScreenAnim.SetTrigger("ShowPaper");
             StartCoroutine(CanvasFading(canvGroup, canvGroup.alpha, 1));
@@ -70,6 +81,12 @@ public class ResultScreen : MonoBehaviour
 
         transform.position = head.position + new Vector3(head.forward.x, 0, head.forward.z).normalized * menuDistance;
         transform.rotation = head.transform.rotation;
+
+
+        if (!_stopTimer)
+        {
+            timeInSeconds += Time.deltaTime;
+        }
     }
 
 
@@ -140,11 +157,11 @@ public class ResultScreen : MonoBehaviour
     IEnumerator Stamp()
     {
         yield return new WaitForSeconds(0.5f);
-        if (progress < 100)
+        if (progressScript.losing)
         {
             failedStampImage.SetTrigger("FailTrigger");
         }
-        else if (progress >= 100) 
+        else if (progressScript.wining) 
         {
             successStampImage.SetTrigger("SuccessTrigger");
         }

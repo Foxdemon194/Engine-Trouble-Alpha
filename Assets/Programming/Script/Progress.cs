@@ -31,7 +31,7 @@ public class Progress : MonoBehaviour
 
     public float timer = 600; //ten minutes
     public bool losing;
-
+    public bool wining;
     //Pause 
     //public GameObject wristUI;
     //public bool activateUI = true;
@@ -151,8 +151,8 @@ public class Progress : MonoBehaviour
             //rightController.maxRaycastDistance = 3f;
             //rightControllerVisual.lineLength = 3f;
 
-            //result screen here (win)
-
+            //result screen here (lose)
+            losing = true;
         }
 
         //win screen
@@ -166,8 +166,8 @@ public class Progress : MonoBehaviour
             //rightController.maxRaycastDistance = 3f;
             //rightControllerVisual.lineLength = 3f;
 
-            //result screen here (lose)
-
+            //result screen here (win)
+            wining = true;
         }
 
         if (bostLever)
