@@ -99,8 +99,6 @@ public class Progress : MonoBehaviour
             }
         }
 
-        timer -= Time.deltaTime;
-
         distance.text = (progress.maxValue + "KM");
         distanceTravelled.text = (Mathf.Round(progress.value * 100) / 100 + "KM");
         distanceRemaining.text = (((Mathf.Round(progress.maxValue * 100) / 100) - Mathf.Round(progress.value * 100) / 100) + "KM");
@@ -170,6 +168,15 @@ public class Progress : MonoBehaviour
             wining = true;
         }
 
+        if (wining || losing)
+        {
+            speed = 0;
+            timer += 0;
+            normalSpeed = 0;
+            higSpeed = 0;
+            lowSpeed = 0;
+        }
+
         if (bostLever)
         {
             if (tut)
@@ -183,6 +190,13 @@ public class Progress : MonoBehaviour
                 engines[rand].SpawnFire();
                 bostLever = false;
             }
+        }
+
+        timer -= Time.deltaTime;
+
+        if (timer <= 0)
+        {
+            timer = 0;
         }
     }
 

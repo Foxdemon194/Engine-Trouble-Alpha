@@ -24,6 +24,10 @@ public class ArrowAnim : MonoBehaviour
     public bool shovel;
     public bool lever;
     public bool bucket;
+    public bool pipe1;
+    public bool pipe2;
+    public bool pipe3;
+    public bool pipe4;
 
     private void Start()
     {
@@ -120,6 +124,26 @@ public class ArrowAnim : MonoBehaviour
         if (shovel)
         {
             anim.SetBool("shovel", true);
+        }
+
+        if (pipe1)
+        {
+            anim.SetBool("pipe 1", true);
+        }
+
+        if (pipe2)
+        {
+            anim.SetBool("pipe 2", true);
+        }
+
+        if (pipe3)
+        {
+            anim.SetBool("pipe 3", true);
+        }
+
+        if (pipe4)
+        {
+            anim.SetBool("pipe 4", true);
         }
     }
 }

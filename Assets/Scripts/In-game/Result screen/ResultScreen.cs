@@ -50,7 +50,7 @@ public class ResultScreen : MonoBehaviour
     //timer
     private bool _stopTimer;
     //progress
-    Progress progressScript;
+    public Progress progressScript;
 
 
 

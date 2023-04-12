@@ -44,6 +44,6 @@ public class TitleScene : MonoBehaviour
 
     public void LoadScene()
     {
-        SceneManager.LoadScene("Bedroom");                 
+        SceneManager.LoadScene("Cutscene");                 
     }
 }

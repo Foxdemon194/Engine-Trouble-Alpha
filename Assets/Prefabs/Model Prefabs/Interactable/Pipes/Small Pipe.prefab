@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 9210814617463647349}
   m_Layer: 0
   m_Name: Small Pipe
-  m_TagString: Untagged
+  m_TagString: Metal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
