@@ -60,6 +60,12 @@ public class BasicTutorialDialogue : MonoBehaviour
 
     public BoostLever lever;
     public Pressure pressure;
+
+    public Pressure[] pres;
+    public EngineManager[] engines;
+
+    public bool done;
+
     //public bool cont2;
 
     // Start is called before the first frame update
@@ -386,6 +392,8 @@ public class BasicTutorialDialogue : MonoBehaviour
             speaker2.Play();
             speaker3.clip = clip22;
             speaker3.Play();
+            Unlock();
+            done = true;
             //eventful first day huh
         }
     }
@@ -410,5 +418,30 @@ public class BasicTutorialDialogue : MonoBehaviour
 
         colliderGroups[currentCol].SetActive(true);
         triggerGroups[currentCol].SetActive(true);
+    }
+
+    public void Unlock()
+    {
+        for (int i = 0; i < pres.Length; i++)
+        {
+            pres[i].sPressure = 10;
+            pres[i].pressureIncrease = 0.007f;
+            pres[i].normalPressureTimerSpeed = 0.01f;
+            pres[i].highPressureTimerSpeed = 0.05f;
+            pres[i].mediumPressureTimerSpeed = 0.03f;
+            pres[i].lowPressureTimerSpeed = 0.007f;
+        }
+
+        for (int j = 0; j < engines.Length; j++)
+        {
+            engines[j].coalLevel = 30;
+            engines[j].coalDrainAmount = 0.005f;
+            engines[j].coalIncrease = 30;
+            engines[j].coalTimerSpeed = 0.01f;
+            engines[j].waterLevel = 40;
+            engines[j].waterDrainAmount = 0.008f;
+            engines[j].waterIncrease = 50;
+            engines[j].waterTimerSpeed = 0.01f;
+        }
     }
 }
