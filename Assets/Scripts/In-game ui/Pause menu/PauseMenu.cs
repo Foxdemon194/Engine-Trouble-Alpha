@@ -18,7 +18,8 @@ public class PauseMenu : MonoBehaviour
     //tips
     public string[] tips;
     public Text tipText;
-    private int _chooseTip;
+    public int _chooseTip;
+    
 
     private void Start()
     {
@@ -35,6 +36,16 @@ public class PauseMenu : MonoBehaviour
     }
      void Update()
     {
+
+        if (_chooseTip > tips.Length)
+        {
+            _chooseTip = 0;
+        }
+        else if (_chooseTip < 0)
+        {
+            _chooseTip = tips.Length;
+        }
+
         if (showButton.action.WasPressedThisFrame())
         {
             if (Time.timeScale == 0)
@@ -67,6 +78,8 @@ public class PauseMenu : MonoBehaviour
         {
             //subtitleText.enabled = false;
         }
+
+        
     }
 
     public void ResumeGame()
@@ -102,5 +115,15 @@ public class PauseMenu : MonoBehaviour
         subtitleToggle.isOn = toggle;
         PlayerPrefs.SetInt("toggles", (toggle ? 1 : 0));
         PlayerPrefs.Save(); //save sub toggle setting
+    }
+
+    //tip buttons
+    public void NextTipButton()
+    {
+        tipText.text = "Tip: " + tips[_chooseTip++];
+    }
+    public void PreviousTipButton()
+    {
+        tipText.text = "Tip: " + tips[_chooseTip--];
     }
 }

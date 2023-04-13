@@ -52,7 +52,8 @@ public class ResultScreen : MonoBehaviour
     //progress
     public Progress progressScript;
 
-
+    private bool stampSuccess;
+    private bool stampFailed;
 
     private void Start()
     {
@@ -72,6 +73,11 @@ public class ResultScreen : MonoBehaviour
 
         if (progressScript.losing || progressScript.wining)                                 //CHANGE THE CONDITION
         {
+            progressScript.enabled = false;
+            if (progressScript.losing) { stampFailed= true; }
+            if (progressScript.wining) { stampSuccess = true; }
+            progressScript.losing = false;
+            progressScript.wining = false;
             _stopTimer = true;  //stop timer
             ambienceAudio.volume /= 2;
             _resultScreenAnim.SetTrigger("ShowPaper");
@@ -119,7 +125,7 @@ public class ResultScreen : MonoBehaviour
         while (progressSlider.value < progress)
         {
             
-            progressSlider.value += 0.5f;
+            progressSlider.value += 1.5f;
             yield return new WaitForSeconds(0.01f);
         }
         sliderEndSfx.Play();
@@ -157,13 +163,15 @@ public class ResultScreen : MonoBehaviour
     IEnumerator Stamp()
     {
         yield return new WaitForSeconds(0.5f);
-        if (progressScript.losing)
+        if (stampFailed)
         {
             failedStampImage.SetTrigger("FailTrigger");
+            stampFailed= false;
         }
-        else if (progressScript.wining) 
+        else if (stampSuccess) 
         {
             successStampImage.SetTrigger("SuccessTrigger");
+            stampSuccess= false;
         }
         stampSfx.time = 0.15f;
         stampSfx.Play();
