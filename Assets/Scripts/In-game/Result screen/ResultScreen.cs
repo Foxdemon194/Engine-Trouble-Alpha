@@ -55,6 +55,9 @@ public class ResultScreen : MonoBehaviour
     private bool stampSuccess;
     private bool stampFailed;
 
+    //so the dialogue can play
+    public CaptainDialogueEvents dialogue;
+
     private void Start()
     {
         canvGroup = resultCanvas.GetComponent<CanvasGroup>();
@@ -74,8 +77,8 @@ public class ResultScreen : MonoBehaviour
         if (progressScript.losing || progressScript.wining)                                 //CHANGE THE CONDITION
         {
             progressScript.enabled = false;
-            if (progressScript.losing) { stampFailed= true; }
-            if (progressScript.wining) { stampSuccess = true; }
+            if (progressScript.losing) { stampFailed= true; dialogue.lost = true; }
+            if (progressScript.wining) { stampSuccess = true; dialogue.won = true; }
             progressScript.losing = false;
             progressScript.wining = false;
             _stopTimer = true;  //stop timer
@@ -190,6 +193,7 @@ public class ResultScreen : MonoBehaviour
     }
     public void QuitToMenuButton()
     {
+        BedroomDialogue.clipNum++;
         SceneManager.LoadScene("Bedroom");
     }
 }

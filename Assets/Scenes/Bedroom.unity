@@ -532,7 +532,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-60752
+  m_Name: pb_Mesh-3230
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -2182,6 +2182,7 @@ MonoBehaviour:
   menuDistance: 0.5
   tips: []
   tipText: {fileID: 0}
+  _chooseTip: 0
 --- !u!4 &203483998
 Transform:
   m_ObjectHideFlags: 0
@@ -3477,7 +3478,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-58442
+  m_Name: pb_Mesh-2640
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -4338,7 +4339,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-60768
+  m_Name: pb_Mesh-3246
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -9316,7 +9317,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-58488
+  m_Name: pb_Mesh-2686
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -13601,7 +13602,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-60782
+  m_Name: pb_Mesh-3260
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -16940,7 +16941,7 @@ PrefabInstance:
     - target: {fileID: 1091386961054028766, guid: f3f2421856c6f1f4f852f553cafdb5fe, type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 371fec6c28694e444b9f4aa0115e19f3, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 1091386961054028766, guid: f3f2421856c6f1f4f852f553cafdb5fe, type: 3}
       propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
       value: 1
@@ -16953,6 +16954,32 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 625960584006994602, guid: f3f2421856c6f1f4f852f553cafdb5fe, type: 3}
   m_PrefabInstance: {fileID: 2049072342}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2049072344 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 280361692055097360, guid: f3f2421856c6f1f4f852f553cafdb5fe, type: 3}
+  m_PrefabInstance: {fileID: 2049072342}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &2049072345 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 1091386961054028766, guid: f3f2421856c6f1f4f852f553cafdb5fe, type: 3}
+  m_PrefabInstance: {fileID: 2049072342}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2049072346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2049072344}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec84de3a188d7b643974438176e8583f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  intro:
+  - {fileID: 8300000, guid: 371fec6c28694e444b9f4aa0115e19f3, type: 3}
+  - {fileID: 8300000, guid: 37a16348fb682ed4981e2d8f3337317f, type: 3}
+  speaker: {fileID: 2049072345}
 --- !u!1001 &2054807640
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17478,8 +17505,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "To enter the level, press\n\"Level 1\" to spawn in the punch card. \nThe
-    card will spawn next to the machine \nand then you can insert it to start."
+  m_Text: "To enter the level, click\na button in the journal to spawn in a\npunch
+    card. The card will spawn next to the \nmachine and then you can insert it to
+    start."
 --- !u!222 &2117199410
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -15,6 +15,7 @@ public class Progress : MonoBehaviour
     //public GameObject loseText;
     //public GameObject winText;
     public Slider progress;
+    public float progressValue;
     public Pressure[] pressure;////////////////////////////////////////////
     public EngineManager[] engines;
     
@@ -32,6 +33,7 @@ public class Progress : MonoBehaviour
     public float timer = 600; //ten minutes
     public bool losing;
     public bool wining;
+    public bool stall;
     //Pause 
     //public GameObject wristUI;
     //public bool activateUI = true;
@@ -66,10 +68,11 @@ public class Progress : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        progressValue = progress.value;
         //Time.timeScale = modifiedTime;
         for (int i = 0; i < pressure.Length; i++)
         {
-            if (pressure[i].sPressure >= 75 || pressure[i].sPressure <= 25 || engines[i].coalLevel >= 75 || engines[i].coalLevel <= 25 || engines[i].waterLevel >= 75 || engines[i].waterLevel <= 25)
+            if (pressure[i].sPressure >= 75 || pressure[i].sPressure <= 25 || engines[i].coalLevel >= 75 || engines[i].coalLevel <= 25 || engines[i].waterLevel <= 25)
             {
                 checkLight[i].intensity = 1;
                 checkLight[i].color = Color.red;
@@ -116,14 +119,14 @@ public class Progress : MonoBehaviour
 
         progress.value += speed;
 
-        if (losing)
+        if (stall)
         {
             speed = 0;
         }
         
         if (averagePressure <= 10 || !CheckGear())
         {
-            losing = true;
+            stall = true;
         }
         else if (averagePressure > 10 && averagePressure <= 25)
         {

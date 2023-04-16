@@ -89,6 +89,11 @@ public class BasicTutorialDialogue : MonoBehaviour
             }
         }*/
 
+        if (done)
+        {
+            cont = false;
+        }
+
         if (cont == true)
         {
             if (Timer <= interval)
@@ -439,6 +444,31 @@ public class BasicTutorialDialogue : MonoBehaviour
             engines[j].coalIncrease = 30;
             engines[j].coalTimerSpeed = 0.01f;
             engines[j].waterLevel = 40;
+            engines[j].waterDrainAmount = 0.008f;
+            engines[j].waterIncrease = 50;
+            engines[j].waterTimerSpeed = 0.01f;
+        }
+    }
+
+    public void Unlock2()
+    {
+        for (int i = 0; i < pres.Length; i++)
+        {
+            pres[i].sPressure = 25;
+            pres[i].pressureIncrease = 0.007f;
+            pres[i].normalPressureTimerSpeed = 0.01f;
+            pres[i].highPressureTimerSpeed = 0.05f;
+            pres[i].mediumPressureTimerSpeed = 0.03f;
+            pres[i].lowPressureTimerSpeed = 0.007f;
+        }
+
+        for (int j = 0; j < engines.Length; j++)
+        {
+            engines[j].coalLevel = 75;
+            engines[j].coalDrainAmount = 0.005f;
+            engines[j].coalIncrease = 30;
+            engines[j].coalTimerSpeed = 0.01f;
+            engines[j].waterLevel = 100;
             engines[j].waterDrainAmount = 0.008f;
             engines[j].waterIncrease = 50;
             engines[j].waterTimerSpeed = 0.01f;
